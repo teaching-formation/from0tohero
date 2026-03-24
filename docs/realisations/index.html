@@ -366,10 +366,16 @@ ul.task-list li input[type="checkbox"] {
         IA
       </button>
       <button onclick="filter('cat','cyber',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        Cyber
+        Cybersécurité
+      </button>
+      <button onclick="filter('cat','mlops',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        MLOps
       </button>
       <button onclick="filter('cat','dev',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         Dev
+      </button>
+      <button onclick="filter('cat','autre',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        Autre
       </button>
     </div>
   </div>
@@ -419,7 +425,9 @@ const catColors = {
   cloud:  { color:'#a78bfa', bg:'#a78bfa0d', border:'#a78bfa22' },
   ia:     { color:'#f0a500', bg:'#f0a5000d', border:'#f0a50022' },
   cyber:  { color:'#ff4560', bg:'#ff45600d', border:'#ff456022' },
+  mlops:  { color:'#fb923c', bg:'#fb923c0d', border:'#fb923c22' },
   dev:    { color:'#f472b6', bg:'#f472b60d', border:'#f472b622' },
+  autre:  { color:'#9ca3af', bg:'#9ca3af0d', border:'#9ca3af22' },
 };
 
 function renderRealisations(list) {
