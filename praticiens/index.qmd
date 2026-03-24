@@ -10,6 +10,12 @@ page-layout: full
     <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#e8e4d9; margin:0 0 0.5rem 0;">Les gens qui construisent</h1>
     <p style="color:#6b7280; font-size:0.9rem; margin:0 0 2rem 0;">Profils de praticiens tech — Data, DevOps, Cloud, IA, Cybersécurité, MLOps, Dev.</p>
 
+    <!-- Recherche -->
+    <input id="search-input" type="text" placeholder="Rechercher par nom, rôle, ville, stack..."
+      oninput="renderPraticiens(getFiltered())"
+      style="font-family:'Space Mono',monospace; font-size:0.78rem; background:#12141a; border:1px solid #1e2128; color:#e8e4d9; padding:0.55rem 1rem; border-radius:2px; width:100%; max-width:480px; outline:none; margin-bottom:1.25rem;"
+      onfocus="this.style.borderColor='#f0a500'" onblur="this.style.borderColor='#1e2128'"/>
+
     <!-- Filtres -->
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
       <button onclick="filterPraticiens('all', this)"
@@ -65,7 +71,8 @@ const praticiens = [
     open_to_work: false,
     linkedin:     "https://linkedin.com/in/diakite",
     github:       "https://github.com/diakite-data",
-    bio:          "Fondateur de from0tohero.dev. 1100+ apprenants formés en Data Engineering."
+    bio:          "Fondateur de from0tohero.dev. 1100+ apprenants formés en Data Engineering.",
+    badges:       ["MENTOR", "SPEAKER", "OPEN SOURCE"]
   }
 ];
 
@@ -86,6 +93,15 @@ function renderPraticiens(list) {
           </div>
           <span style="font-size:1.2rem;">${p.country}</span>
         </div>
+
+        ${p.badges && p.badges.length ? `
+        <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.1rem;">
+          ${p.badges.map(b => {
+            const badgeColors = { 'MENTOR':'#f0a500', 'SPEAKER':'#a78bfa', 'OPEN SOURCE':'#34d399', 'CERTIFIÉ':'#60a5fa' };
+            const col = badgeColors[b] || '#6b7280';
+            return `<span style="font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.08em; color:${col}; border:1px solid ${col}33; background:${col}0d; padding:1px 7px; border-radius:2px;">${b}</span>`;
+          }).join('')}
+        </div>` : ''}
 
         <p style="font-size:0.83rem; color:#9ca3af; line-height:1.6; margin:0;">${p.bio}</p>
 
@@ -108,19 +124,31 @@ function renderPraticiens(list) {
   `).join('');
 }
 
+let activeFilter = 'all';
+
+function getFiltered() {
+  const q = (document.getElementById('search-input')?.value || '').toLowerCase();
+  let list = praticiens;
+  if (activeFilter === 'open') list = list.filter(p => p.open_to_work);
+  else if (activeFilter !== 'all') list = list.filter(p => p.category === activeFilter);
+  if (q) list = list.filter(p =>
+    p.name.toLowerCase().includes(q) ||
+    p.role.toLowerCase().includes(q) ||
+    p.city.toLowerCase().includes(q) ||
+    p.stack.join(' ').toLowerCase().includes(q)
+  );
+  return list;
+}
+
 function filterPraticiens(filter, btn) {
-  document.querySelectorAll('#praticiens-grid').forEach(() => {});
+  activeFilter = filter;
   document.querySelectorAll('button').forEach(b => {
     b.style.borderColor = '#1e2128';
     b.style.color = '#6b7280';
   });
   btn.style.borderColor = '#f0a500';
   btn.style.color = '#f0a500';
-
-  let filtered = praticiens;
-  if (filter === 'open')  filtered = praticiens.filter(p => p.open_to_work);
-  else if (filter !== 'all') filtered = praticiens.filter(p => p.category === filter);
-  renderPraticiens(filtered);
+  renderPraticiens(getFiltered());
 }
 
 renderPraticiens(praticiens);
