@@ -8,7 +8,7 @@ page-layout: full
   <a href="index.html" style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; text-decoration:none; letter-spacing:0.06em;">← Praticiens</a>
 
   <div style="margin-top:2rem; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid #1e2128;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; margin-bottom:0.5rem;">Data Engineer · 🇨🇮 Abidjan</p>
+    <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; margin-bottom:0.5rem;">Expert & Architecte Data · 🇨🇮 Abidjan</p>
     <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.5rem); font-weight:800; color:#e8e4d9; margin:0 0 1rem 0;">Diakité Mamadou Youssouf</h1>
     <p style="font-size:0.95rem; color:#9ca3af; line-height:1.8; max-width:600px;">
       Fondateur de from0tohero.dev. 1100+ apprenants formés en Data Engineering dans 40+ pays.
@@ -21,18 +21,14 @@ page-layout: full
     </div>
   </div>
 
-  <div style="margin-bottom:2rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">// stack</p>
-    <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
-      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">Python</span>
-      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">Airflow</span>
-      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">dbt</span>
-      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">Spark</span>
-      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">GCP</span>
-      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">Kafka</span>
-    </div>
+  <!-- COMPÉTENCES TECHNIQUES -->
+  <div style="margin-bottom:2.5rem;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1.5rem;">// compétences techniques</p>
+
+    <div id="skills-container"></div>
   </div>
 
+  <!-- RÉALISATIONS -->
   <div>
     <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">// réalisations</p>
     <a href="../realisations/index.html" style="text-decoration:none;">
@@ -59,4 +55,38 @@ page-layout: full
   </div>
 
 </div>
+
+<script>
+const skillSections = [
+  {
+    label: "Langages & Frameworks",
+    items: ["Python","PySpark","Scala","Spark-Scala","R","RShiny","Julia","Bash","Spark ML","Spark Streaming","Pandas","NumPy","Scikit-learn","FastAPI"]
+  },
+  {
+    label: "Big Data & Streaming",
+    items: ["Apache Spark","Hadoop HDFS","Apache Kafka","Apache Airflow","Hive","Apache Flink","RabbitMQ"]
+  },
+  {
+    label: "Intelligence Artificielle & ML",
+    items: ["Machine Learning","Statistiques","Modélisation prédictive","Data Mining","Deep Learning","CNN","NLP","Generative AI","MLOps","Model Deployment"]
+  },
+  {
+    label: "Bases de Données & Stockage",
+    items: ["PostgreSQL","MySQL","Oracle","TeraData","MariaDB","Elasticsearch","MongoDB","Neo4J","Couchbase","AWS S3","MinIO","Google BigQuery"]
+  },
+  {
+    label: "Cloud & DevOps",
+    items: ["AWS","Google Cloud Platform","Microsoft Azure","Docker","Kubernetes","Microsoft Fabric","Power BI","CI/CD","GitLab","GitHub","Git","Rundeck"]
+  }
+];
+
+const tag = s => `<span style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; border:1px solid #1e2128; padding:3px 9px; border-radius:2px;">${s}</span>`;
+
+document.getElementById('skills-container').innerHTML = skillSections.map(sec => `
+  <div style="margin-bottom:1.5rem;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:#6b7280; margin-bottom:0.75rem;">${sec.label}</p>
+    <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">${sec.items.map(tag).join('')}</div>
+  </div>
+`).join('');
+</script>
 ```
