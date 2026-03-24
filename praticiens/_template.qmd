@@ -1,0 +1,13 @@
+---
+title: "Prénom Nom"
+role: "Data Engineer"
+country: "🇨🇮"
+city: "Abidjan"
+stack: [Python, Airflow, dbt, GCP]
+linkedin: "https://linkedin.com/in/..."
+github: "https://github.com/..."
+youtube: ""
+bio: "Courte bio en 2-3 phrases."
+open_to_work: true
+listing: false
+---

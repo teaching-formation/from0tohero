@@ -1,0 +1,12 @@
+---
+title: "Titre de la réalisation"
+praticien: "slug-praticien"
+category: data        # data | devops | cloud | ia | cyber | dev
+type: pipeline        # pipeline | dashboard | api | bootcamp | youtube | podcast | newsletter | blog | autre
+stack: [Python, Airflow]
+date: "2024-11"
+demo_url: ""
+repo_url: ""
+excerpt: "Description courte en une ou deux phrases."
+listing: false
+---

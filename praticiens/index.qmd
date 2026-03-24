@@ -1,0 +1,128 @@
+---
+title: ""
+page-layout: full
+---
+```{=html}
+<div style="padding:3rem 6vw; max-width:1200px; margin:0 auto;">
+
+  <div style="margin-bottom:2.5rem;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:0.5rem;">// praticiens</p>
+    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#e8e4d9; margin:0 0 0.5rem 0;">Les gens qui construisent</h1>
+    <p style="color:#6b7280; font-size:0.9rem; margin:0 0 2rem 0;">Profils de praticiens tech — Data, DevOps, Cloud, IA, Cybersécurité, MLOps, Dev.</p>
+
+    <!-- Filtres -->
+    <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+      <button onclick="filterPraticiens('all', this)"
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #f0a500; color:#f0a500; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        Tous
+      </button>
+      <button onclick="filterPraticiens('open', this)"
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        ● Disponibles
+      </button>
+      <button onclick="filterPraticiens('data', this)"
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        Data
+      </button>
+      <button onclick="filterPraticiens('devops', this)"
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        DevOps
+      </button>
+      <button onclick="filterPraticiens('cloud', this)"
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        Cloud
+      </button>
+      <button onclick="filterPraticiens('ia', this)"
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        IA
+      </button>
+      <button onclick="filterPraticiens('cybersecurite', this)"
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        Cybersécurité
+      </button>
+      <button onclick="filterPraticiens('mlops', this)"
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        MLOps
+      </button>
+    </div>
+  </div>
+
+  <div id="praticiens-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.25rem;"></div>
+  <p id="no-results" style="display:none; color:#6b7280; font-family:'Space Mono',monospace; font-size:0.85rem; margin-top:2rem;">Aucun praticien dans cette catégorie.</p>
+
+</div>
+
+<script>
+const praticiens = [
+  {
+    slug:         "diakite",
+    name:         "Diakité Mamadou Youssouf",
+    role:         "Data Engineer",
+    country:      "🇨🇮",
+    city:         "Abidjan",
+    stack:        ["Python", "Airflow", "dbt", "Spark", "GCP"],
+    category:     "data",
+    open_to_work: false,
+    linkedin:     "https://linkedin.com/in/diakite",
+    github:       "https://github.com/diakite-data",
+    bio:          "Fondateur de from0tohero.dev. 1100+ apprenants formés en Data Engineering."
+  }
+];
+
+function renderPraticiens(list) {
+  const grid = document.getElementById('praticiens-grid');
+  const noRes = document.getElementById('no-results');
+  if (!list.length) { grid.innerHTML = ''; noRes.style.display = 'block'; return; }
+  noRes.style.display = 'none';
+  grid.innerHTML = list.map(p => `
+    <a href="${p.slug}.html" style="text-decoration:none;">
+      <div style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
+           onmouseover="this.style.borderColor='#f0a500'" onmouseout="this.style.borderColor='#1e2128'">
+
+        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <p style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0;">${p.name}</p>
+            <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; margin:0.2rem 0 0 0;">${p.role}</p>
+          </div>
+          <span style="font-size:1.2rem;">${p.country}</span>
+        </div>
+
+        <p style="font-size:0.83rem; color:#9ca3af; line-height:1.6; margin:0;">${p.bio}</p>
+
+        <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
+          ${p.stack.map(s => `
+            <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.06em; color:#6b7280; border:1px solid #1e2128; padding:2px 7px; border-radius:2px;">${s}</span>
+          `).join('')}
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.25rem;">
+          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#6b7280;">${p.city}</span>
+          ${p.open_to_work
+            ? `<span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#00e676;">● disponible</span>`
+            : `<span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#6b7280;">○ non dispo</span>`
+          }
+        </div>
+
+      </div>
+    </a>
+  `).join('');
+}
+
+function filterPraticiens(filter, btn) {
+  document.querySelectorAll('#praticiens-grid').forEach(() => {});
+  document.querySelectorAll('button').forEach(b => {
+    b.style.borderColor = '#1e2128';
+    b.style.color = '#6b7280';
+  });
+  btn.style.borderColor = '#f0a500';
+  btn.style.color = '#f0a500';
+
+  let filtered = praticiens;
+  if (filter === 'open')  filtered = praticiens.filter(p => p.open_to_work);
+  else if (filter !== 'all') filtered = praticiens.filter(p => p.category === filter);
+  renderPraticiens(filtered);
+}
+
+renderPraticiens(praticiens);
+</script>
+```

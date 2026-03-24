@@ -1,0 +1,120 @@
+---
+title: ""
+page-layout: full
+---
+```{=html}
+<div style="padding:3rem 6vw; max-width:800px; margin:0 auto;">
+
+  <div style="margin-bottom:3rem;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:0.5rem;">// soumettre</p>
+    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#e8e4d9; margin:0 0 0.75rem 0;">Montre ce que tu construis.</h1>
+    <p style="color:#6b7280; font-size:0.95rem; line-height:1.8; max-width:520px;">
+      Tu es praticien tech ? Soumets ton profil, un article ou une réalisation.
+      Je valide et publie sous 48h.
+    </p>
+  </div>
+
+  <!-- 3 cartes -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.25rem; margin-bottom:3rem;">
+
+    <!-- Profil -->
+    <div id="card-profil"
+         onclick="showForm('profil')"
+         style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;"
+         onmouseover="this.style.borderColor='#f0a500'" onmouseout="if(activeForm!='profil') this.style.borderColor='#1e2128'">
+      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">01</p>
+      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0 0 0.5rem 0;">Mon profil</h3>
+      <p style="font-size:0.83rem; color:#9ca3af; line-height:1.6; margin:0;">Figurer dans l'annuaire des praticiens.</p>
+    </div>
+
+    <!-- Article -->
+    <div id="card-article"
+         onclick="showForm('article')"
+         style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;"
+         onmouseover="this.style.borderColor='#f0a500'" onmouseout="if(activeForm!='article') this.style.borderColor='#1e2128'">
+      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">02</p>
+      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0 0 0.5rem 0;">Un article</h3>
+      <p style="font-size:0.83rem; color:#9ca3af; line-height:1.6; margin:0;">Partager un article publié sur Medium, LinkedIn, Dev.to...</p>
+    </div>
+
+    <!-- Réalisation -->
+    <div id="card-realisation"
+         onclick="showForm('realisation')"
+         style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;"
+         onmouseover="this.style.borderColor='#f0a500'" onmouseout="if(activeForm!='realisation') this.style.borderColor='#1e2128'">
+      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">03</p>
+      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0 0 0.5rem 0;">Une réalisation</h3>
+      <p style="font-size:0.83rem; color:#9ca3af; line-height:1.6; margin:0;">Pipeline, dashboard, API, bootcamp, chaîne YT...</p>
+    </div>
+
+  </div>
+
+  <!-- Zone formulaire Tally -->
+  <div id="form-zone" style="display:none;">
+
+    <div style="border-top:1px solid #1e2128; padding-top:2rem;">
+      <p id="form-label" style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1.5rem;"></p>
+
+      <!-- Tally iframes — un seul visible à la fois -->
+      <iframe id="tally-profil"
+        style="display:none; width:100%; border:none; border-radius:6px; min-height:600px;"
+        src="https://tally.so/embed/GxLlv2?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy">
+      </iframe>
+
+      <iframe id="tally-article"
+        style="display:none; width:100%; border:none; border-radius:6px; min-height:600px;"
+        src="https://tally.so/embed/BzZ7zA?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy">
+      </iframe>
+
+      <iframe id="tally-realisation"
+        style="display:none; width:100%; border:none; border-radius:6px; min-height:600px;"
+        src="https://tally.so/embed/q4OVLk?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy">
+      </iframe>
+
+    </div>
+  </div>
+
+  <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; margin-top:3rem; line-height:1.8;">
+    Délai de publication : 48h max · Je valide chaque soumission manuellement.
+  </p>
+
+</div>
+
+<script>
+let activeForm = null;
+
+function showForm(type) {
+  // Reset cartes
+  ['profil','article','realisation'].forEach(t => {
+    document.getElementById('card-' + t).style.borderColor = '#1e2128';
+  });
+
+  // Active la carte cliquée
+  document.getElementById('card-' + type).style.borderColor = '#f0a500';
+  activeForm = type;
+
+  // Labels
+  const labels = {
+    profil:      '01 — Soumettre mon profil',
+    article:     '02 — Soumettre un article',
+    realisation: '03 — Soumettre une réalisation'
+  };
+  document.getElementById('form-label').textContent = labels[type];
+
+  // Cache tous les iframes
+  ['profil','article','realisation'].forEach(t => {
+    document.getElementById('tally-' + t).style.display = 'none';
+  });
+
+  // Affiche le bon
+  document.getElementById('tally-' + type).style.display = 'block';
+  document.getElementById('form-zone').style.display = 'block';
+
+  // Scroll vers le formulaire
+  document.getElementById('form-zone').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+```

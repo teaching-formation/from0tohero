@@ -1,0 +1,30 @@
+/*-- scss:defaults --*/
+
+$body-bg:       #0a0b0f;
+$body-color:    #e8e4d9;
+$link-color:    #f0a500;
+
+$font-family-sans-serif: 'Syne', system-ui, sans-serif;
+$font-family-monospace:  'Space Mono', monospace;
+
+$navbar-bg: #0a0b0f;
+$navbar-fg: #e8e4d9;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --f0th-gold:    #f0a500;
+  --f0th-green:   #00e676;
+  --f0th-surface: #12141a;
+  --f0th-border:  #1e2128;
+  --f0th-muted:   #6b7280;
+}
+
+.navbar .nav-link {
+  font-family: $font-family-monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

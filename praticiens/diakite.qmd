@@ -1,0 +1,42 @@
+---
+title: "Diakité Mamadou Youssouf"
+page-layout: full
+---
+```{=html}
+<div style="padding:3rem 6vw; max-width:900px; margin:0 auto;">
+
+  <a href="index.html" style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; text-decoration:none; letter-spacing:0.06em;">← Praticiens</a>
+
+  <div style="margin-top:2rem; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid #1e2128;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; margin-bottom:0.5rem;">Data Engineer · 🇨🇮 Abidjan</p>
+    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.5rem); font-weight:800; color:#e8e4d9; margin:0 0 1rem 0;">Diakité Mamadou Youssouf</h1>
+    <p style="font-size:0.95rem; color:#9ca3af; line-height:1.8; max-width:600px;">
+      Fondateur de from0tohero.dev. 1100+ apprenants formés en Data Engineering dans 40+ pays.
+    </p>
+    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.25rem;">
+      <a href="https://github.com/diakite-data" target="_blank"
+         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; border:1px solid #1e2128; padding:4px 12px; border-radius:2px; text-decoration:none;">GitHub</a>
+      <a href="https://linkedin.com/in/diakite" target="_blank"
+         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; border:1px solid #1e2128; padding:4px 12px; border-radius:2px; text-decoration:none;">LinkedIn</a>
+    </div>
+  </div>
+
+  <div style="margin-bottom:2rem;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">// stack</p>
+    <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">Python</span>
+      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">Airflow</span>
+      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">dbt</span>
+      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">Spark</span>
+      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">GCP</span>
+      <span style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#6b7280; border:1px solid #1e2128; padding:4px 10px; border-radius:2px;">Kafka</span>
+    </div>
+  </div>
+
+  <div>
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">// réalisations</p>
+    <p style="color:#6b7280; font-size:0.85rem; font-family:'Space Mono',monospace;">Aucune réalisation pour le moment.</p>
+  </div>
+
+</div>
+```

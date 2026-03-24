@@ -1,0 +1,112 @@
+---
+title: ""
+page-layout: full
+---
+```{=html}
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- ── HERO ── -->
+<section style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding: 0 6vw; max-width:1200px; margin:0 auto;">
+
+  <p style="font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.18em; color:#f0a500; text-transform:uppercase; margin-bottom:1.5rem;">
+    <span style="color:#00e676;">●</span> &nbsp;from0tohero.dev — v1.0
+  </p>
+
+  <h1 style="font-family:'Syne',sans-serif; font-size:clamp(2.8rem,7vw,6rem); font-weight:800; line-height:1.05; color:#e8e4d9; margin:0 0 1.5rem 0;">
+    Du terrain.<br>
+    <span style="color:#f0a500;">Pas des slides.</span>
+  </h1>
+
+  <p style="font-size:1.05rem; color:#9ca3af; max-width:500px; line-height:1.8; margin-bottom:2.5rem;">
+    Articles, réalisations et profils de praticiens tech —
+    Data, DevOps, Cloud, IA, Cybersécurité, Dev.
+  </p>
+
+  <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:5rem;">
+    <a href="praticiens/index.html"
+       style="background:#f0a500; color:#000; font-family:'Space Mono',monospace;
+              font-size:0.78rem; font-weight:700; letter-spacing:0.08em;
+              text-transform:uppercase; padding:0.75rem 1.6rem;
+              border-radius:2px; text-decoration:none;">
+      Voir les praticiens
+    </a>
+    <a href="soumettre/index.html"
+       style="background:transparent; color:#e8e4d9; font-family:'Space Mono',monospace;
+              font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
+              padding:0.75rem 1.6rem; border-radius:2px;
+              border:1px solid #1e2128; text-decoration:none;">
+      Soumettre mon profil
+    </a>
+  </div>
+
+</section>
+
+<!-- ── SECTION ARTICLES ── -->
+<section style="padding:5rem 6vw; border-top:1px solid #1e2128; max-width:1200px; margin:0 auto;">
+
+  <div style="margin-bottom:2.5rem;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:0.5rem;">// articles</p>
+    <h2 style="font-family:'Syne',sans-serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:#e8e4d9; margin:0 0 0.5rem 0;">Ce que les praticiens écrivent</h2>
+    <p style="color:#6b7280; font-size:0.9rem; margin:0;">Articles publiés sur Medium, LinkedIn, Dev.to — agrégés ici.</p>
+  </div>
+
+  <p style="font-family:'Space Mono',monospace; font-size:0.82rem; color:#6b7280; margin-bottom:2rem;">
+    Les premiers articles arrivent bientôt. Tu en as un à partager ?
+  </p>
+
+  <a href="soumettre/index.html" style="font-family:'Space Mono',monospace; font-size:0.78rem; color:#f0a500; text-decoration:none; letter-spacing:0.08em; text-transform:uppercase;">Soumettre un article →</a>
+
+</section>
+
+<!-- ── SECTION BOOTCAMP ── -->
+<section style="padding:5rem 6vw; border-top:1px solid #1e2128; max-width:1200px; margin:0 auto;">
+
+  <div style="margin-bottom:2.5rem;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:0.5rem;">// bootcamps</p>
+    <h2 style="font-family:'Syne',sans-serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:#e8e4d9; margin:0 0 0.5rem 0;">Apprendre par la pratique</h2>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem;">
+
+    <a href="https://diakite-data.github.io/data-engineering-bootcamp/" style="text-decoration:none;" target="_blank">
+      <div style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:2rem; transition:border-color 0.2s;">
+        <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#00e676; margin-bottom:1rem;">● live</p>
+        <h3 style="font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:#e8e4d9; margin:0 0 0.5rem 0;">Data Engineering</h3>
+        <p style="font-size:0.85rem; color:#9ca3af; margin-bottom:1.5rem;">Python · Airflow · dbt · Spark · GCP · Kafka</p>
+        <div style="display:flex; gap:2rem; font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280;">
+          <span>35 modules</span>
+          <span>1 100+ apprenants</span>
+          <span>40+ pays</span>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://da.from0tohero.dev" style="text-decoration:none;" target="_blank">
+      <div style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:2rem;">
+        <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#6b7280; margin-bottom:1rem;">○ coming soon</p>
+        <h3 style="font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:#e8e4d9; margin:0 0 0.5rem 0;">Data Analyst</h3>
+        <p style="font-size:0.85rem; color:#9ca3af; margin-bottom:1.5rem;">SQL · Python · Power BI · Tableau · Stats</p>
+        <div style="display:flex; gap:2rem; font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280;">
+          <span>En construction</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ── CTA FINAL ── -->
+<section style="padding:6rem 6vw; border-top:1px solid #1e2128; text-align:center; max-width:1200px; margin:0 auto;">
+  <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:1rem;">// tu es praticien ?</p>
+  <h2 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,3rem); font-weight:800; color:#e8e4d9; margin:0 0 1rem 0;">Montre ce que tu construis.</h2>
+  <p style="color:#6b7280; font-size:0.95rem; margin-bottom:2rem;">Profil · Articles · Réalisations — tout en 5 minutes.</p>
+  <a href="soumettre/index.html"
+     style="background:#f0a500; color:#000; font-family:'Space Mono',monospace;
+            font-size:0.8rem; font-weight:700; letter-spacing:0.08em;
+            text-transform:uppercase; padding:0.85rem 2rem;
+            border-radius:2px; text-decoration:none;">
+    Soumettre →
+  </a>
+</section>
+```

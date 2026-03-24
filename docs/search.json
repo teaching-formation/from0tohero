@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "soumettre/index.html",
+    "href": "soumettre/index.html",
+    "title": "Montre ce que tu construis.",
+    "section": "",
+    "text": "// soumettre\n    Montre ce que tu construis.\n    \n      Tu es praticien tech ? Soumets ton profil, un article ou une réalisation.\n      Je valide et publie sous 48h.\n    \n  \n\n  \n  \n\n    \n    \n      01\n      Mon profil\n      Figurer dans l'annuaire des praticiens.\n    \n\n    \n    \n      02\n      Un article\n      Partager un article publié sur Medium, LinkedIn, Dev.to...\n    \n\n    \n    \n      03\n      Une réalisation\n      Pipeline, dashboard, API, bootcamp, chaîne YT...\n    \n\n  \n\n  \n  \n\n    \n      \n\n      \n      \n      \n\n      \n      \n\n      \n      \n\n    \n  \n\n  \n    Délai de publication : 48h max · Je valide chaque soumission manuellement.\n  \n\n\n\n\n\n\n\n Retour au sommet"
+  },
+  {
+    "objectID": "praticiens/index.html",
+    "href": "praticiens/index.html",
+    "title": "Les gens qui construisent",
+    "section": "",
+    "text": "// praticiens\n    Les gens qui construisent\n    Profils de praticiens tech — Data, DevOps, Cloud, IA, Cybersécurité, MLOps, Dev.\n\n    \n    \n      \n        Tous\n      \n      \n        ● Disponibles\n      \n      \n        Data\n      \n      \n        DevOps\n      \n      \n        Cloud\n      \n      \n        IA\n      \n      \n        Cybersécurité\n      \n      \n        MLOps\n      \n    \n  \n\n  \n  Aucun praticien dans cette catégorie.\n\n\n\n\n\n\n\n Retour au sommet"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "\n    Du terrain.\n    Pas des slides.\n  ",
+    "section": "",
+    "text": "●  from0tohero.dev — v1.0\n  \n\n  \n    Du terrain.\n    Pas des slides.\n  \n\n  \n    Articles, réalisations et profils de praticiens tech —\n    Data, DevOps, Cloud, IA, Cybersécurité, Dev.\n  \n\n  \n    \n      Voir les praticiens\n    \n    \n      Soumettre mon profil\n    \n  \n\n\n\n\n\n\n  \n    // articles\n    Ce que les praticiens écrivent\n    Articles publiés sur Medium, LinkedIn, Dev.to — agrégés ici.\n  \n\n  \n    Les premiers articles arrivent bientôt. Tu en as un à partager ?\n  \n\n  Soumettre un article →\n\n\n\n\n\n\n  \n    // bootcamps\n    Apprendre par la pratique\n  \n\n  \n\n    \n      \n        ● live\n        Data Engineering\n        Python · Airflow · dbt · Spark · GCP · Kafka\n        \n          35 modules\n          1 100+ apprenants\n          40+ pays\n        \n      \n    \n\n    \n      \n        ○ coming soon\n        Data Analyst\n        SQL · Python · Power BI · Tableau · Stats\n        \n          En construction\n        \n      \n    \n\n  \n\n\n\n\n\n  // tu es praticien ?\n  Montre ce que tu construis.\n  Profil · Articles · Réalisations — tout en 5 minutes.\n  \n    Soumettre →\n  \n\n\n\n\n Retour au sommet"
+  },
+  {
+    "objectID": "evenements/index.html",
+    "href": "evenements/index.html",
+    "title": "Conférences, meetups & hackathons",
+    "section": "",
+    "text": "// événements\n    Conférences, meetups & hackathons\n    Événements tech à ne pas manquer — en ligne et en présentiel.\n\n    \n    \n      \n        Tous\n      \n      \n        À venir\n      \n      \n        Passés\n      \n    \n\n    \n    \n      \n        Tous types\n      \n      \n        Conférence\n      \n      \n        Meetup\n      \n      \n        Hackathon\n      \n      \n        Webinaire\n      \n      \n        Bootcamp\n      \n    \n  \n\n  \n  Aucun événement pour ces filtres.\n\n\n\n\n\n\n\n Retour au sommet"
+  },
+  {
+    "objectID": "articles/index.html",
+    "href": "articles/index.html",
+    "title": "Ce que les praticiens écrivent",
+    "section": "",
+    "text": "// articles\n    Ce que les praticiens écrivent\n    Articles publiés sur Medium, LinkedIn, Dev.to — agrégés ici.\n\n    \n    \n      \n        Tous\n      \n      \n        Data\n      \n      \n        DevOps\n      \n      \n        Cloud\n      \n      \n        IA\n      \n      \n        Cyber\n      \n      \n        Dev\n      \n    \n  \n\n  \n  \n  \n\n  \n    Aucun article dans cette catégorie pour le moment.\n  \n\n\n\n\n\n\n\n\n\n\n\n\nAucun article correspondant\n Retour au sommet"
+  },
+  {
+    "objectID": "realisations/index.html",
+    "href": "realisations/index.html",
+    "title": "Ce que les praticiens construisent",
+    "section": "",
+    "text": "// réalisations\n    Ce que les praticiens construisent\n    Pipelines, dashboards, APIs, bootcamps, chaînes YT — du concret.\n\n    \n    \n      \n        Tous\n      \n      \n        Pipeline\n      \n      \n        Dashboard\n      \n      \n        API\n      \n      \n        Bootcamp\n      \n      \n        YouTube\n      \n      \n        App\n      \n      \n        Autre\n      \n    \n\n    \n    \n      \n        Toutes catégories\n      \n      \n        Data\n      \n      \n        DevOps\n      \n      \n        Cloud\n      \n      \n        IA\n      \n      \n        Cyber\n      \n      \n        Dev\n      \n    \n  \n\n  \n  Aucune réalisation pour ces filtres.\n\n\n\n\n\n\n\n Retour au sommet"
+  },
+  {
+    "objectID": "praticiens/diakite.html",
+    "href": "praticiens/diakite.html",
+    "title": "Diakité Mamadou Youssouf",
+    "section": "",
+    "text": "← Praticiens\n\n  \n    Data Engineer · 🇨🇮 Abidjan\n    Diakité Mamadou Youssouf\n    \n      Fondateur de from0tohero.dev. 1100+ apprenants formés en Data Engineering dans 40+ pays.\n    \n    \n      GitHub\n      LinkedIn\n    \n  \n\n  \n    // stack\n    \n      Python\n      Airflow\n      dbt\n      Spark\n      GCP\n      Kafka\n    \n  \n\n  \n    // réalisations\n    Aucune réalisation pour le moment.\n  \n\n\n\n\n\n Retour au sommet"
+  }
+]

@@ -1,0 +1,12 @@
+---
+title: "Nom de l'événement"
+date: "2025-03-15"
+date_fin: "2025-03-17"       # si multi-jours
+type: conference              # conference | meetup | hackathon | webinaire | bootcamp
+lieu: "Abidjan, CI"          # ou "Online"
+pays: "🇨🇮"
+url: "https://..."
+excerpt: "Description courte."
+gratuit: true
+listing: false
+---

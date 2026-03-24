@@ -1,0 +1,72 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "from0tohero.dev"
+  description: "La plateforme des praticiens — Data, DevOps, Cloud, IA, Cybersécurité, Dev."
+  site-url: "https://from0tohero.dev"
+  favicon: assets/img/favicon.svg
+
+  open-graph:
+    title: "from0tohero.dev"
+    description: "La plateforme des praticiens"
+    image: assets/img/og-banner.png
+
+  twitter-card:
+    title: "from0tohero.dev"
+    description: "La plateforme des praticiens "
+    image: assets/img/og-banner.png
+    card-style: summary_large_image
+
+  navbar:
+    background: "#0a0b0f"
+    foreground: "#e8e4d9"
+    pinned: true
+    logo: assets/img/logo.svg
+    logo-alt: "from0tohero.dev"
+    title: false
+    left:
+      - text: "Articles"
+        href: articles/index.qmd
+      - text: "Praticiens"
+        href: praticiens/index.qmd
+      - text: "Réalisations"
+        href: realisations/index.qmd
+      - text: "Événements"
+        href: evenements/index.qmd
+    right:
+      - text: "Soumettre"
+        href: soumettre/index.qmd
+      - icon: github
+        href: "https://github.com/diakite-data"
+
+  page-footer:
+    background: "#0a0b0f"
+    foreground: "#6b7280"
+    border: false
+    left: "© 2026 from0tohero.dev"
+    right: "Construit par DIAKITE MAMADOU YOUSSOUF & pour les praticiens 🌍"
+
+  search:
+    location: navbar
+    type: overlay
+
+  back-to-top-navigation: true
+  page-navigation: false
+  reader-mode: false
+
+format:
+  html:
+    theme:
+      dark: [darkly, assets/css/theme.scss]
+    css: assets/css/custom.css
+    toc: false
+    anchor-sections: false
+    smooth-scroll: true
+    highlight-style: dracula
+    include-in-header: assets/js/head-scripts.html
+    include-after-body: assets/js/body-scripts.html
+    page-layout: full
+
+lang: fr
