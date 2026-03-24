@@ -63,7 +63,7 @@ const praticiens = [
   {
     slug:         "diakite",
     name:         "Diakité Mamadou Youssouf",
-    role:         "Data Engineer",
+    role:         "Expert & Architecte Data",
     country:      "🇨🇮",
     city:         "Abidjan",
     stack:        ["Python", "Airflow", "dbt", "Spark", "GCP"],
