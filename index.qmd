@@ -124,7 +124,7 @@ page-layout: full
         La première communauté de praticiens tech francophones.
       </h2>
       <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.8;margin:0;">
-        1 100+ apprenants formés. 40+ pays. Une communauté construite autour de ceux qui font — pas de ceux qui parlent.
+        Une communauté construite autour de ceux qui font — pas de ceux qui parlent.
       </p>
     </div>
 
