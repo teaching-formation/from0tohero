@@ -6,55 +6,55 @@ page-layout: full
 <div style="padding:3rem 6vw; max-width:1200px; margin:0 auto;">
 
   <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:0.5rem;">// praticiens</p>
-    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#e8e4d9; margin:0 0 0.5rem 0;">Les gens qui construisent</h1>
-    <p style="color:#6b7280; font-size:0.9rem; margin:0 0 2rem 0;">Profils de praticiens tech — Data, DevOps, Cloud, IA, Cybersécurité, MLOps, Dev.</p>
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// praticiens</p>
+    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Les gens qui construisent</h1>
+    <p style="color:#94a3b8; font-size:0.9rem; margin:0 0 2rem 0;">Profils de praticiens tech — Data, DevOps, Cloud, IA, Cybersécurité, MLOps, Dev.</p>
 
     <!-- Recherche -->
     <input id="search-input" type="text" placeholder="Rechercher par nom, rôle, ville, stack..."
       oninput="renderPraticiens(getFiltered())"
-      style="font-family:'Space Mono',monospace; font-size:0.78rem; background:#12141a; border:1px solid #1e2128; color:#e8e4d9; padding:0.55rem 1rem; border-radius:2px; width:100%; max-width:480px; outline:none; margin-bottom:1.25rem;"
-      onfocus="this.style.borderColor='#f0a500'" onblur="this.style.borderColor='#1e2128'"/>
+      style="font-family:'Space Mono',monospace; font-size:0.78rem; background:#f0f9ff; border:1px solid #bae6fd; color:#0f172a; padding:0.55rem 1rem; border-radius:2px; width:100%; max-width:480px; outline:none; margin-bottom:1.25rem;"
+      onfocus="this.style.borderColor='#0ea5e9'" onblur="this.style.borderColor='#bae6fd'"/>
 
     <!-- Filtres -->
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
       <button onclick="filterPraticiens('all', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #f0a500; color:#f0a500; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:4px 12px; border-radius:2px; cursor:pointer;">
         Tous
       </button>
       <button onclick="filterPraticiens('open', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
         ● Disponibles
       </button>
       <button onclick="filterPraticiens('data', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
         Data
       </button>
       <button onclick="filterPraticiens('devops', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
         DevOps
       </button>
       <button onclick="filterPraticiens('cloud', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
         Cloud
       </button>
       <button onclick="filterPraticiens('ia', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
         IA
       </button>
       <button onclick="filterPraticiens('cybersecurite', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
         Cybersécurité
       </button>
       <button onclick="filterPraticiens('mlops', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
         MLOps
       </button>
     </div>
   </div>
 
   <div id="praticiens-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.25rem;"></div>
-  <p id="no-results" style="display:none; color:#6b7280; font-family:'Space Mono',monospace; font-size:0.85rem; margin-top:2rem;">Aucun praticien dans cette catégorie.</p>
+  <p id="no-results" style="display:none; color:#94a3b8; font-family:'Space Mono',monospace; font-size:0.85rem; margin-top:2rem;">Aucun praticien dans cette catégorie.</p>
 
 </div>
 
@@ -83,13 +83,13 @@ function renderPraticiens(list) {
   noRes.style.display = 'none';
   grid.innerHTML = list.map(p => `
     <a href="${p.slug}.html" style="text-decoration:none;">
-      <div style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
-           onmouseover="this.style.borderColor='#f0a500'" onmouseout="this.style.borderColor='#1e2128'">
+      <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
+           onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="this.style.borderColor='#bae6fd'">
 
         <div style="display:flex; justify-content:space-between; align-items:flex-start;">
           <div>
-            <p style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0;">${p.name}</p>
-            <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; margin:0.2rem 0 0 0;">${p.role}</p>
+            <p style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0;">${p.name}</p>
+            <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#0ea5e9; margin:0.2rem 0 0 0;">${p.role}</p>
           </div>
           <span style="font-size:1.2rem;">${p.country}</span>
         </div>
@@ -97,25 +97,25 @@ function renderPraticiens(list) {
         ${p.badges && p.badges.length ? `
         <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.1rem;">
           ${p.badges.map(b => {
-            const badgeColors = { 'MENTOR':'#f0a500', 'SPEAKER':'#a78bfa', 'OPEN SOURCE':'#34d399', 'CERTIFIÉ':'#60a5fa' };
-            const col = badgeColors[b] || '#6b7280';
+            const badgeColors = { 'MENTOR':'#f97316', 'SPEAKER':'#a78bfa', 'OPEN SOURCE':'#34d399', 'CERTIFIÉ':'#60a5fa' };
+            const col = badgeColors[b] || '#94a3b8';
             return `<span style="font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.08em; color:${col}; border:1px solid ${col}33; background:${col}0d; padding:1px 7px; border-radius:2px;">${b}</span>`;
           }).join('')}
         </div>` : ''}
 
-        <p style="font-size:0.83rem; color:#9ca3af; line-height:1.6; margin:0;">${p.bio}</p>
+        <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0;">${p.bio}</p>
 
         <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
           ${p.stack.map(s => `
-            <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.06em; color:#6b7280; border:1px solid #1e2128; padding:2px 7px; border-radius:2px;">${s}</span>
+            <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.06em; color:#94a3b8; border:1px solid #bae6fd; padding:2px 7px; border-radius:2px;">${s}</span>
           `).join('')}
         </div>
 
         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.25rem;">
-          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#6b7280;">${p.city}</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#94a3b8;">${p.city}</span>
           ${p.open_to_work
             ? `<span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#00e676;">● disponible</span>`
-            : `<span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#6b7280;">○ non dispo</span>`
+            : `<span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#94a3b8;">○ non dispo</span>`
           }
         </div>
 
@@ -143,11 +143,11 @@ function getFiltered() {
 function filterPraticiens(filter, btn) {
   activeFilter = filter;
   document.querySelectorAll('button').forEach(b => {
-    b.style.borderColor = '#1e2128';
-    b.style.color = '#6b7280';
+    b.style.borderColor = '#bae6fd';
+    b.style.color = '#94a3b8';
   });
-  btn.style.borderColor = '#f0a500';
-  btn.style.color = '#f0a500';
+  btn.style.borderColor = '#0ea5e9';
+  btn.style.color = '#0ea5e9';
   renderPraticiens(getFiltered());
 }
 

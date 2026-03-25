@@ -6,22 +6,22 @@ page-layout: full
 <div style="padding:3rem 6vw; max-width:1200px; margin:0 auto;">
 
   <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:0.5rem;">// événements</p>
-    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#e8e4d9; margin:0 0 0.5rem 0;">Conférences, meetups & hackathons</h1>
-    <p style="color:#6b7280; font-size:0.9rem; margin:0 0 2rem 0;">Événements tech à ne pas manquer — en ligne et en présentiel.</p>
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// événements</p>
+    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Conférences, meetups & hackathons</h1>
+    <p style="color:#94a3b8; font-size:0.9rem; margin:0 0 2rem 0;">Événements tech à ne pas manquer — en ligne et en présentiel.</p>
 
     <!-- Filtres statut -->
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
       <button onclick="filter('statut','all',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #f0a500; color:#f0a500; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-statut">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-statut">
         Tous
       </button>
       <button onclick="filter('statut','upcoming',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-statut">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-statut">
         À venir
       </button>
       <button onclick="filter('statut','past',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-statut">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-statut">
         Passés
       </button>
     </div>
@@ -29,34 +29,34 @@ page-layout: full
     <!-- Filtres type -->
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
       <button onclick="filter('type','all',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #f0a500; color:#f0a500; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
         Tous types
       </button>
       <button onclick="filter('type','conference',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
         Conférence
       </button>
       <button onclick="filter('type','meetup',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
         Meetup
       </button>
       <button onclick="filter('type','hackathon',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
         Hackathon
       </button>
       <button onclick="filter('type','webinaire',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
         Webinaire
       </button>
       <button onclick="filter('type','bootcamp',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
         Bootcamp
       </button>
     </div>
   </div>
 
   <div id="evenements-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem;"></div>
-  <p id="no-results" style="display:none; color:#6b7280; font-family:'Space Mono',monospace; font-size:0.85rem; margin-top:2rem;">Aucun événement pour ces filtres.</p>
+  <p id="no-results" style="display:none; color:#94a3b8; font-family:'Space Mono',monospace; font-size:0.85rem; margin-top:2rem;">Aucun événement pour ces filtres.</p>
 
 </div>
 
@@ -94,7 +94,7 @@ const typeColors = {
   meetup:     { color:'#34d399', bg:'#34d3990d', border:'#34d39922' },
   hackathon:  { color:'#ff4560', bg:'#ff45600d', border:'#ff456022' },
   webinaire:  { color:'#a78bfa', bg:'#a78bfa0d', border:'#a78bfa22' },
-  bootcamp:   { color:'#f0a500', bg:'#f0a5000d', border:'#f0a50022' }
+  bootcamp:   { color:'#0ea5e9', bg:'#0ea5e90d', border:'#0ea5e922' }
 };
 
 function isUpcoming(e) {
@@ -121,13 +121,13 @@ function renderEvenements(list) {
     const upcoming = isUpcoming(e);
     const badge   = upcoming
       ? `<span style="font-family:'Space Mono',monospace; font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:#00e676;">● À venir</span>`
-      : `<span style="font-family:'Space Mono',monospace; font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:#6b7280;">○ Passé</span>`;
+      : `<span style="font-family:'Space Mono',monospace; font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color:#94a3b8;">○ Passé</span>`;
     const gratuitBadge = e.gratuit
       ? `<span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#34d399; border:1px solid #34d39922; background:#34d3990d; padding:2px 8px; border-radius:2px;">Gratuit</span>`
       : '';
     return `
-    <div style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
-         onmouseover="this.style.borderColor='#f0a500'" onmouseout="this.style.borderColor='#1e2128'">
+    <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
+         onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="this.style.borderColor='#bae6fd'">
 
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
         <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
@@ -139,16 +139,16 @@ function renderEvenements(list) {
         ${badge}
       </div>
 
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0;">${e.title}</h3>
+      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0;">${e.title}</h3>
 
-      <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; margin:0;">
+      <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#94a3b8; margin:0;">
         ${e.pays} ${e.lieu} &nbsp;·&nbsp; ${formatDate(e.date, e.date_fin)}
       </p>
 
-      <p style="font-size:0.85rem; color:#9ca3af; line-height:1.6; margin:0; flex:1;">${e.excerpt}</p>
+      <p style="font-size:0.85rem; color:#475569; line-height:1.6; margin:0; flex:1;">${e.excerpt}</p>
 
       <a href="${e.url}" target="_blank"
-         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; text-decoration:none; letter-spacing:0.06em;">
+         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#0ea5e9; text-decoration:none; letter-spacing:0.06em;">
         Voir l'événement →
       </a>
 
@@ -159,13 +159,13 @@ function renderEvenements(list) {
 function filter(dim, val, btn) {
   if (dim === 'statut') {
     activeStatut = val;
-    document.querySelectorAll('.btn-statut').forEach(b => { b.style.borderColor='#1e2128'; b.style.color='#6b7280'; });
+    document.querySelectorAll('.btn-statut').forEach(b => { b.style.borderColor='#bae6fd'; b.style.color='#94a3b8'; });
   } else {
     activeType = val;
-    document.querySelectorAll('.btn-type').forEach(b => { b.style.borderColor='#1e2128'; b.style.color='#6b7280'; });
+    document.querySelectorAll('.btn-type').forEach(b => { b.style.borderColor='#bae6fd'; b.style.color='#94a3b8'; });
   }
-  btn.style.borderColor = '#f0a500';
-  btn.style.color = '#f0a500';
+  btn.style.borderColor = '#0ea5e9';
+  btn.style.color = '#0ea5e9';
 
   let filtered = evenements;
   if (activeStatut === 'upcoming') filtered = filtered.filter(e => isUpcoming(e));

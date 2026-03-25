@@ -5,51 +5,51 @@ page-layout: full
 ```{=html}
 <div style="padding:3rem 6vw; max-width:900px; margin:0 auto;">
 
-  <a href="index.html" style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; text-decoration:none; letter-spacing:0.06em;">← Praticiens</a>
+  <a href="index.html" style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#94a3b8; text-decoration:none; letter-spacing:0.06em;">← Praticiens</a>
 
-  <div style="margin-top:2rem; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid #1e2128;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; margin-bottom:0.5rem;">Expert & Architecte Data · 🇨🇮 Abidjan</p>
-    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.5rem); font-weight:800; color:#e8e4d9; margin:0 0 1rem 0;">Diakité Mamadou Youssouf</h1>
-    <p style="font-size:0.95rem; color:#9ca3af; line-height:1.8; max-width:600px;">
+  <div style="margin-top:2rem; margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid #bae6fd;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#0ea5e9; margin-bottom:0.5rem;">Expert & Architecte Data · 🇨🇮 Abidjan</p>
+    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.5rem); font-weight:800; color:#0f172a; margin:0 0 1rem 0;">Diakité Mamadou Youssouf</h1>
+    <p style="font-size:0.95rem; color:#475569; line-height:1.8; max-width:600px;">
       Fondateur de from0tohero.dev. 1100+ apprenants formés en Data Engineering dans 40+ pays.
     </p>
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.25rem;">
       <a href="https://github.com/diakite-data" target="_blank"
-         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; border:1px solid #1e2128; padding:4px 12px; border-radius:2px; text-decoration:none;">GitHub</a>
+         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#94a3b8; border:1px solid #bae6fd; padding:4px 12px; border-radius:2px; text-decoration:none;">GitHub</a>
       <a href="https://www.linkedin.com/in/mamadou-youssouf-diakite-083630135" target="_blank"
-         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; border:1px solid #1e2128; padding:4px 12px; border-radius:2px; text-decoration:none;">LinkedIn</a>
+         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#94a3b8; border:1px solid #bae6fd; padding:4px 12px; border-radius:2px; text-decoration:none;">LinkedIn</a>
     </div>
   </div>
 
   <!-- COMPÉTENCES TECHNIQUES -->
   <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1.5rem;">// compétences techniques</p>
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1.5rem;">// compétences techniques</p>
 
     <div id="skills-container"></div>
   </div>
 
   <!-- RÉALISATIONS -->
   <div>
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">// réalisations</p>
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1rem;">// réalisations</p>
     <a href="../realisations/index.html" style="text-decoration:none;">
-      <div style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
-           onmouseover="this.style.borderColor='#f0a500'" onmouseout="this.style.borderColor='#1e2128'">
+      <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
+           onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="this.style.borderColor='#bae6fd'">
         <div style="display:flex; gap:0.5rem;">
           <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:#60a5fa; border:1px solid #60a5fa22; background:#60a5fa0d; padding:2px 8px; border-radius:2px;">DATA</span>
-          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:#6b7280; border:1px solid #1e2128; padding:2px 8px; border-radius:2px;">Bootcamp</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:#94a3b8; border:1px solid #bae6fd; padding:2px 8px; border-radius:2px;">Bootcamp</span>
         </div>
-        <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0;">Data Engineering Bootcamp</h3>
-        <p style="font-size:0.85rem; color:#9ca3af; line-height:1.6; margin:0;">35 modules · 1100+ apprenants · 40+ pays. Le bootcamp Data Engineering complet en français.</p>
+        <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0;">Data Engineering Bootcamp</h3>
+        <p style="font-size:0.85rem; color:#475569; line-height:1.6; margin:0;">35 modules · 1100+ apprenants · 40+ pays. Le bootcamp Data Engineering complet en français.</p>
         <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
-          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#6b7280; border:1px solid #1e2128; padding:2px 6px; border-radius:2px;">Python</span>
-          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#6b7280; border:1px solid #1e2128; padding:2px 6px; border-radius:2px;">Airflow</span>
-          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#6b7280; border:1px solid #1e2128; padding:2px 6px; border-radius:2px;">dbt</span>
-          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#6b7280; border:1px solid #1e2128; padding:2px 6px; border-radius:2px;">Spark</span>
-          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#6b7280; border:1px solid #1e2128; padding:2px 6px; border-radius:2px;">GCP</span>
-          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#6b7280; border:1px solid #1e2128; padding:2px 6px; border-radius:2px;">Kafka</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#94a3b8; border:1px solid #bae6fd; padding:2px 6px; border-radius:2px;">Python</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#94a3b8; border:1px solid #bae6fd; padding:2px 6px; border-radius:2px;">Airflow</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#94a3b8; border:1px solid #bae6fd; padding:2px 6px; border-radius:2px;">dbt</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#94a3b8; border:1px solid #bae6fd; padding:2px 6px; border-radius:2px;">Spark</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#94a3b8; border:1px solid #bae6fd; padding:2px 6px; border-radius:2px;">GCP</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#94a3b8; border:1px solid #bae6fd; padding:2px 6px; border-radius:2px;">Kafka</span>
         </div>
         <a href="https://diakite-data.github.io/data-engineering-bootcamp/" target="_blank"
-           style="font-family:'Space Mono',monospace; font-size:0.68rem; color:#f0a500; text-decoration:none;">Demo →</a>
+           style="font-family:'Space Mono',monospace; font-size:0.68rem; color:#0ea5e9; text-decoration:none;">Demo →</a>
       </div>
     </a>
   </div>
@@ -80,11 +80,11 @@ const skillSections = [
   }
 ];
 
-const tag = s => `<span style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; border:1px solid #1e2128; padding:3px 9px; border-radius:2px;">${s}</span>`;
+const tag = s => `<span style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#94a3b8; border:1px solid #bae6fd; padding:3px 9px; border-radius:2px;">${s}</span>`;
 
 document.getElementById('skills-container').innerHTML = skillSections.map(sec => `
   <div style="margin-bottom:1.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:#6b7280; margin-bottom:0.75rem;">${sec.label}</p>
+    <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:#94a3b8; margin-bottom:0.75rem;">${sec.label}</p>
     <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">${sec.items.map(tag).join('')}</div>
   </div>
 `).join('');

@@ -6,46 +6,46 @@ page-layout: full
 <div style="padding:3rem 6vw; max-width:1200px; margin:0 auto;">
 
   <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:0.5rem;">// réalisations</p>
-    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#e8e4d9; margin:0 0 0.5rem 0;">Ce que les praticiens construisent</h1>
-    <p style="color:#6b7280; font-size:0.9rem; margin:0 0 2rem 0;">Pipelines, dashboards, APIs, bootcamps, chaînes YT — du concret.</p>
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// réalisations</p>
+    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Ce que les praticiens construisent</h1>
+    <p style="color:#94a3b8; font-size:0.9rem; margin:0 0 2rem 0;">Pipelines, dashboards, APIs, bootcamps, chaînes YT — du concret.</p>
 
     <!-- Filtres type -->
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
       <button onclick="filter('type','all',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #f0a500; color:#f0a500; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
         Tous
       </button>
       <button onclick="filter('type','pipeline',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
         Pipeline
       </button>
       <button onclick="filter('type','dashboard',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
         Dashboard
       </button>
       <button onclick="filter('type','api',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
         API
       </button>
       <button onclick="filter('type','bootcamp',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
         Bootcamp
       </button>
       <button onclick="filter('type','youtube',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
         YouTube
       </button>
       <button onclick="filter('type','app',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
         App
       </button>
       <button onclick="filter('type','cours',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
         Cours
       </button>
       <button onclick="filter('type','autre',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
+        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
         Autre
       </button>
     </div>
@@ -53,46 +53,46 @@ page-layout: full
     <!-- Filtres catégorie -->
     <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
       <button onclick="filter('cat','all',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #f0a500; color:#f0a500; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         Toutes catégories
       </button>
       <button onclick="filter('cat','data',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         Data
       </button>
       <button onclick="filter('cat','devops',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         DevOps
       </button>
       <button onclick="filter('cat','cloud',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         Cloud
       </button>
       <button onclick="filter('cat','ia',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         IA
       </button>
       <button onclick="filter('cat','cyber',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         Cybersécurité
       </button>
       <button onclick="filter('cat','mlops',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         MLOps
       </button>
       <button onclick="filter('cat','dev',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         Dev
       </button>
       <button onclick="filter('cat','autre',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
+        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
         Autre
       </button>
     </div>
   </div>
 
   <div id="realisations-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem;"></div>
-  <p id="no-results" style="display:none; color:#6b7280; font-family:'Space Mono',monospace; font-size:0.85rem; margin-top:2rem;">Aucune réalisation pour ces filtres.</p>
+  <p id="no-results" style="display:none; color:#94a3b8; font-family:'Space Mono',monospace; font-size:0.85rem; margin-top:2rem;">Aucune réalisation pour ces filtres.</p>
 
 </div>
 
@@ -134,11 +134,11 @@ const catColors = {
   data:   { color:'#60a5fa', bg:'#60a5fa0d', border:'#60a5fa22' },
   devops: { color:'#34d399', bg:'#34d3990d', border:'#34d39922' },
   cloud:  { color:'#a78bfa', bg:'#a78bfa0d', border:'#a78bfa22' },
-  ia:     { color:'#f0a500', bg:'#f0a5000d', border:'#f0a50022' },
+  ia:     { color:'#f97316', bg:'#f973160d', border:'#f9731622' },
   cyber:  { color:'#ff4560', bg:'#ff45600d', border:'#ff456022' },
   mlops:  { color:'#fb923c', bg:'#fb923c0d', border:'#fb923c22' },
   dev:    { color:'#f472b6', bg:'#f472b60d', border:'#f472b622' },
-  autre:  { color:'#9ca3af', bg:'#9ca3af0d', border:'#9ca3af22' },
+  autre:  { color:'#475569', bg:'#4755690d', border:'#47556922' },
 };
 
 function renderRealisations(list) {
@@ -149,33 +149,33 @@ function renderRealisations(list) {
   grid.innerHTML = list.map(r => {
     const c = catColors[r.category] || catColors.data;
     const links = [];
-    if (r.demo_url) links.push(`<a href="${r.demo_url}" target="_blank" style="font-family:'Space Mono',monospace; font-size:0.68rem; color:#6b7280; border:1px solid #1e2128; padding:3px 10px; border-radius:2px; text-decoration:none;">Demo →</a>`);
-    if (r.repo_url) links.push(`<a href="${r.repo_url}" target="_blank" style="font-family:'Space Mono',monospace; font-size:0.68rem; color:#6b7280; border:1px solid #1e2128; padding:3px 10px; border-radius:2px; text-decoration:none;">Repo →</a>`);
+    if (r.demo_url) links.push(`<a href="${r.demo_url}" target="_blank" style="font-family:'Space Mono',monospace; font-size:0.68rem; color:#94a3b8; border:1px solid #bae6fd; padding:3px 10px; border-radius:2px; text-decoration:none;">Demo →</a>`);
+    if (r.repo_url) links.push(`<a href="${r.repo_url}" target="_blank" style="font-family:'Space Mono',monospace; font-size:0.68rem; color:#94a3b8; border:1px solid #bae6fd; padding:3px 10px; border-radius:2px; text-decoration:none;">Repo →</a>`);
     return `
-    <div style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
-         onmouseover="this.style.borderColor='#f0a500'" onmouseout="this.style.borderColor='#1e2128'">
+    <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
+         onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="this.style.borderColor='#bae6fd'">
 
       <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
         <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:${c.color}; border:1px solid ${c.border}; background:${c.bg}; padding:2px 8px; border-radius:2px;">
           ${r.category.toUpperCase()}
         </span>
-        <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:#6b7280; border:1px solid #1e2128; padding:2px 8px; border-radius:2px;">
+        <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; color:#94a3b8; border:1px solid #bae6fd; padding:2px 8px; border-radius:2px;">
           ${typeLabels[r.type] || r.type}
         </span>
       </div>
 
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0;">${r.title}</h3>
+      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0;">${r.title}</h3>
 
       <a href="../praticiens/${r.praticien_slug}.html"
-         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; text-decoration:none;">
+         style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#0ea5e9; text-decoration:none;">
         ${r.praticien}
       </a>
 
-      <p style="font-size:0.85rem; color:#9ca3af; line-height:1.6; margin:0; flex:1;">${r.excerpt}</p>
+      <p style="font-size:0.85rem; color:#475569; line-height:1.6; margin:0; flex:1;">${r.excerpt}</p>
 
       <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
         ${r.stack.map(s => `
-          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#6b7280; border:1px solid #1e2128; padding:2px 6px; border-radius:2px;">${s}</span>
+          <span style="font-family:'Space Mono',monospace; font-size:0.62rem; color:#94a3b8; border:1px solid #bae6fd; padding:2px 6px; border-radius:2px;">${s}</span>
         `).join('')}
       </div>
 
@@ -190,13 +190,13 @@ function renderRealisations(list) {
 function filter(dim, val, btn) {
   if (dim === 'type') {
     activeType = val;
-    document.querySelectorAll('.btn-type').forEach(b => { b.style.borderColor='#1e2128'; b.style.color='#6b7280'; });
+    document.querySelectorAll('.btn-type').forEach(b => { b.style.borderColor='#bae6fd'; b.style.color='#94a3b8'; });
   } else {
     activeCat = val;
-    document.querySelectorAll('.btn-cat').forEach(b => { b.style.borderColor='#1e2128'; b.style.color='#6b7280'; });
+    document.querySelectorAll('.btn-cat').forEach(b => { b.style.borderColor='#bae6fd'; b.style.color='#94a3b8'; });
   }
-  btn.style.borderColor = '#f0a500';
-  btn.style.color = '#f0a500';
+  btn.style.borderColor = '#0ea5e9';
+  btn.style.color = '#0ea5e9';
 
   let filtered = realisations;
   if (activeType !== 'all') filtered = filtered.filter(r => r.type === activeType);

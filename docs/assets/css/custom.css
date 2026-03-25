@@ -1,5 +1,5 @@
-/* forcer dark mode au chargement */
+/* forcer light mode au chargement */
 body {
-  background-color: #0a0b0f;
-  color: #e8e4d9;
+  background-color: #ffffff;
+  color: #0f172a;
 }

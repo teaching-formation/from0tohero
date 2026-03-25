@@ -6,9 +6,9 @@ page-layout: full
 <div style="padding:3rem 6vw; max-width:800px; margin:0 auto;">
 
   <div style="margin-bottom:3rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:0.5rem;">// soumettre</p>
-    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#e8e4d9; margin:0 0 0.75rem 0;">Montre ce que tu construis.</h1>
-    <p style="color:#6b7280; font-size:0.95rem; line-height:1.8; max-width:520px;">
+    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// soumettre</p>
+    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#0f172a; margin:0 0 0.75rem 0;">Montre ce que tu construis.</h1>
+    <p style="color:#94a3b8; font-size:0.95rem; line-height:1.8; max-width:520px;">
       Tu es praticien tech ? Soumets ton profil, un article ou une réalisation.
       Je valide et publie sous 48h.
     </p>
@@ -20,31 +20,31 @@ page-layout: full
     <!-- Profil -->
     <div id="card-profil"
          onclick="showForm('profil')"
-         style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;"
-         onmouseover="this.style.borderColor='#f0a500'" onmouseout="if(activeForm!='profil') this.style.borderColor='#1e2128'">
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">01</p>
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0 0 0.5rem 0;">Mon profil</h3>
-      <p style="font-size:0.83rem; color:#9ca3af; line-height:1.6; margin:0;">Figurer dans l'annuaire des praticiens.</p>
+         style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;"
+         onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="if(activeForm!='profil') this.style.borderColor='#bae6fd'">
+      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1rem;">01</p>
+      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Mon profil</h3>
+      <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0;">Figurer dans l'annuaire des praticiens.</p>
     </div>
 
     <!-- Article -->
     <div id="card-article"
          onclick="showForm('article')"
-         style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;"
-         onmouseover="this.style.borderColor='#f0a500'" onmouseout="if(activeForm!='article') this.style.borderColor='#1e2128'">
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">02</p>
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0 0 0.5rem 0;">Un article</h3>
-      <p style="font-size:0.83rem; color:#9ca3af; line-height:1.6; margin:0;">Partager un article publié sur Medium, LinkedIn, Dev.to...</p>
+         style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;"
+         onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="if(activeForm!='article') this.style.borderColor='#bae6fd'">
+      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1rem;">02</p>
+      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Un article</h3>
+      <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0;">Partager un article publié sur Medium, LinkedIn, Dev.to...</p>
     </div>
 
     <!-- Réalisation -->
     <div id="card-realisation"
          onclick="showForm('realisation')"
-         style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;"
-         onmouseover="this.style.borderColor='#f0a500'" onmouseout="if(activeForm!='realisation') this.style.borderColor='#1e2128'">
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#f0a500; margin-bottom:1rem;">03</p>
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#e8e4d9; margin:0 0 0.5rem 0;">Une réalisation</h3>
-      <p style="font-size:0.83rem; color:#9ca3af; line-height:1.6; margin:0;">Pipeline, dashboard, API, bootcamp, chaîne YT...</p>
+         style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;"
+         onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="if(activeForm!='realisation') this.style.borderColor='#bae6fd'">
+      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1rem;">03</p>
+      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Une réalisation</h3>
+      <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0;">Pipeline, dashboard, API, bootcamp, chaîne YT...</p>
     </div>
 
   </div>
@@ -52,8 +52,41 @@ page-layout: full
   <!-- Zone formulaire Tally -->
   <div id="form-zone" style="display:none;">
 
-    <div style="border-top:1px solid #1e2128; padding-top:2rem;">
-      <p id="form-label" style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1.5rem;"></p>
+    <div style="border-top:1px solid #bae6fd; padding-top:2rem;">
+      <p id="form-label" style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#0ea5e9; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1.5rem;"></p>
+
+      <!-- Gate : as-tu déjà un profil ? -->
+      <div id="gate-profil" style="display:none; background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem; margin-bottom:1.5rem;">
+        <p style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Tu as déjà un profil sur from0tohero.dev ?</p>
+        <p style="font-size:0.83rem; color:#475569; margin:0 0 1.5rem 0;">Un profil est requis pour lier ta soumission à un praticien.</p>
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+          <button onclick="gateAnswer(true)"
+            style="font-family:'Space Mono',monospace; font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+                   background:#f97316; color:#fff; border:none; padding:0.65rem 1.4rem; border-radius:2px; cursor:pointer;">
+            Oui, j'ai un profil →
+          </button>
+          <button onclick="gateAnswer(false)"
+            style="font-family:'Space Mono',monospace; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase;
+                   background:transparent; color:#0f172a; border:1px solid #bae6fd; padding:0.65rem 1.4rem; border-radius:2px; cursor:pointer;">
+            Non, je n'en ai pas encore
+          </button>
+        </div>
+      </div>
+
+      <!-- Rappel après redirection vers profil -->
+      <div id="reminder-banner" style="display:none; background:#0ea5e91a; border:1px solid #0ea5e933; border-radius:6px; padding:1rem 1.25rem; margin-bottom:1.5rem;">
+        <p style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#0ea5e9; margin:0 0 0.75rem 0; letter-spacing:0.06em;">
+          Remplis le formulaire ci-dessous · Une fois soumis, clique sur Continuer.
+        </p>
+        <button onclick="goToNext()"
+          style="font-family:'Space Mono',monospace; font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
+                 background:#f97316; color:#fff; border:none; padding:0.55rem 1.2rem; border-radius:2px; cursor:pointer;">
+          J'ai soumis mon profil → Continuer
+        </button>
+      </div>
+
+      <!-- Script Tally officiel (nécessaire pour les events postMessage) -->
+      <script src="https://tally.so/widgets/embed.js"></script>
 
       <!-- Tally iframes — un seul visible à la fois -->
       <iframe id="tally-profil"
@@ -77,8 +110,8 @@ page-layout: full
     </div>
   </div>
 
-  <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; margin-top:3rem; line-height:1.8;">
-    Délai de publication : 48h max · Je valide chaque soumission manuellement.
+  <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#94a3b8; margin-top:3rem; line-height:1.8;">
+    Délai de publication : 48h max.
   </p>
 
 </div>
@@ -89,31 +122,103 @@ let activeForm = null;
 function showForm(type) {
   // Reset cartes
   ['profil','article','realisation'].forEach(t => {
-    document.getElementById('card-' + t).style.borderColor = '#1e2128';
+    document.getElementById('card-' + t).style.borderColor = '#bae6fd';
   });
 
   // Active la carte cliquée
-  document.getElementById('card-' + type).style.borderColor = '#f0a500';
+  document.getElementById('card-' + type).style.borderColor = '#0ea5e9';
   activeForm = type;
 
-  // Labels
-  const labels = {
-    profil:      '01 — Soumettre mon profil',
-    article:     '02 — Soumettre un article',
-    realisation: '03 — Soumettre une réalisation'
-  };
-  document.getElementById('form-label').textContent = labels[type];
-
-  // Cache tous les iframes
+  // Cache tous les iframes et la gate profil
   ['profil','article','realisation'].forEach(t => {
     document.getElementById('tally-' + t).style.display = 'none';
   });
+  document.getElementById('gate-profil').style.display = 'none';
 
-  // Affiche le bon
-  document.getElementById('tally-' + type).style.display = 'block';
-  document.getElementById('form-zone').style.display = 'block';
+  if (type === 'profil') {
+    // Profil → formulaire direct
+    document.getElementById('form-label').textContent = '01 — Soumettre mon profil';
+    document.getElementById('tally-profil').style.display = 'block';
+    document.getElementById('form-zone').style.display = 'block';
+  } else {
+    // Article ou Réalisation → vérifier d'abord si profil existant
+    const labels = {
+      article:     '02 — Soumettre un article',
+      realisation: '03 — Soumettre une réalisation'
+    };
+    document.getElementById('form-label').textContent = labels[type];
+    document.getElementById('gate-profil').style.display = 'block';
+    document.getElementById('gate-profil').dataset.target = type;
+    document.getElementById('form-zone').style.display = 'block';
+  }
 
   // Scroll vers le formulaire
+  document.getElementById('form-zone').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function gateAnswer(hasProfile) {
+  const type = document.getElementById('gate-profil').dataset.target;
+  document.getElementById('gate-profil').style.display = 'none';
+
+  if (hasProfile) {
+    // A déjà un profil → formulaire cible direct
+    document.getElementById('tally-' + type).style.display = 'block';
+  } else {
+    // Pas encore de profil → formulaire profil en premier
+    document.getElementById('form-label').textContent = '01 — Crée ton profil d\'abord';
+    document.getElementById('tally-profil').style.display = 'block';
+    // Affiche le bouton Continuer immédiatement, visible après soumission
+    document.getElementById('reminder-banner').dataset.next = type;
+    document.getElementById('reminder-banner').style.display = 'block';
+    // Reset carte active visuellement
+    ['profil','article','realisation'].forEach(t => {
+      document.getElementById('card-' + t).style.borderColor = '#bae6fd';
+    });
+    document.getElementById('card-profil').style.borderColor = '#0ea5e9';
+    activeForm = 'profil';
+  }
+}
+
+// Écoute la soumission du formulaire Tally via postMessage
+// Tally envoie parfois un objet, parfois une string JSON
+window.addEventListener('message', function(e) {
+  let data = e.data;
+  if (typeof data === 'string') {
+    try { data = JSON.parse(data); } catch(err) { return; }
+  }
+  if (!data || data.type !== 'tally-form-submitted') return;
+
+  const banner = document.getElementById('reminder-banner');
+  const nextType = banner.dataset.next;
+
+  // Déclenche la redirection seulement si on est dans le flux "pas de profil"
+  if (nextType && activeForm === 'profil') {
+    goToNext();
+  }
+});
+
+function goToNext() {
+  const type = document.getElementById('reminder-banner').dataset.next;
+  if (!type) return;
+
+  // Vide le next pour éviter un double déclenchement
+  document.getElementById('reminder-banner').dataset.next = '';
+  document.getElementById('reminder-banner').style.display = 'none';
+  document.getElementById('tally-profil').style.display = 'none';
+
+  const labels = {
+    article:     '02 — Soumettre un article',
+    realisation: '03 — Soumettre une réalisation'
+  };
+  document.getElementById('form-label').textContent = '✓ Profil enregistré — ' + labels[type];
+  document.getElementById('tally-' + type).style.display = 'block';
+
+  ['profil','article','realisation'].forEach(t => {
+    document.getElementById('card-' + t).style.borderColor = '#bae6fd';
+  });
+  document.getElementById('card-' + type).style.borderColor = '#0ea5e9';
+  activeForm = type;
+
   document.getElementById('form-zone').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 </script>
