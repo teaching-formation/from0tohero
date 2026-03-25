@@ -20,7 +20,7 @@ website:
     card-style: summary_large_image
 
   navbar:
-    background: "white"
+    background: "#ffffff"
     foreground: "#0f172a"
     pinned: true
     logo: assets/img/logo.svg
@@ -42,8 +42,8 @@ website:
         href: "https://github.com/diakite-data"
 
   page-footer:
-    background: "#0f172a"
-    foreground: "#64748b"
+    background: "dark"
+    foreground: "secondary"
     border: false
     left: "© 2026 from0tohero.dev"
     right: "Construit par DIAKITE MAMADOU YOUSSOUF & pour les praticiens 🌍"
@@ -58,7 +58,9 @@ website:
 
 format:
   html:
-    theme: [flatly, assets/css/theme.scss]
+    theme:
+      light: [flatly, assets/css/theme.scss]
+      dark:  [darkly, assets/css/theme.scss]
     css: assets/css/custom.css
     toc: false
     anchor-sections: false

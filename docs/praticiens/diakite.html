@@ -38,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6455e7f669de2dd1a1df5401145d73d4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6455e7f669de2dd1a1df5401145d73d4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4c6e77581cbf6d39d2f9263c2660a0e2.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6455e7f669de2dd1a1df5401145d73d4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3ebfdd283416a7efcc58c794f869134e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-27a086d559c996d29b552d2e911a7a83.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-8eba64e377f7fa8d1e89dadc7c4b02b6.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-27a086d559c996d29b552d2e911a7a83.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -83,7 +87,169 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -131,6 +297,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -142,6 +309,7 @@ ul.task-list li input[type="checkbox"] {
     
 <!-- main -->
 <main class="content column-page" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -166,44 +334,44 @@ ul.task-list li input[type="checkbox"] {
 
 <div style="padding:3.5rem 6vw;max-width:900px;margin:0 auto;">
 
-  <a href="index.html" class="link-back" style="margin-bottom:2.5rem;display:inline-flex;">← Praticiens</a>
+  <a href="index.html" class="link-back" style="margin-bottom:2.5rem;">← Praticiens</a>
 
-  <!-- PROFILE HEADER -->
-  <div style="display:flex;align-items:flex-start;gap:1.5rem;padding:2rem 0 2.5rem 0;border-bottom:1px solid #e2e8f0;flex-wrap:wrap;">
+  <!-- HEADER -->
+  <div style="display:flex;align-items:flex-start;gap:1.5rem;padding:2.5rem 0;border-bottom:1px solid var(--f-border);flex-wrap:wrap;">
 
     <div class="profile-avatar">DY</div>
 
     <div style="flex:1;min-width:200px;">
       <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.5rem;">
-        <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.5rem,3.5vw,2rem);font-weight:800;color:#0f172a;margin:0;">Diakité Mamadou Youssouf</h1>
-        <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#94a3b8;border:1px solid #e2e8f0;padding:2px 8px;border-radius:4px;">🇨🇮 Abidjan</span>
+        <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.5rem,3.5vw,2rem);font-weight:800;color:var(--f-text-1);margin:0;">Diakité Mamadou Youssouf</h1>
+        <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--f-text-3);border:1px solid var(--f-border);background:var(--f-surface);padding:2px 8px;border-radius:4px;">🇨🇮 Abidjan</span>
       </div>
 
-      <p style="font-family:'Space Mono',monospace;font-size:.78rem;color:#0ea5e9;margin:0 0 .9rem 0;letter-spacing:.04em;">Expert &amp; Architecte Data</p>
+      <p style="font-family:'Space Mono',monospace;font-size:.78rem;color:var(--f-sky);margin:0 0 .9rem 0;letter-spacing:.04em;">Expert &amp; Architecte Data</p>
 
       <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.1rem;">
-        <span style="font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.08em;color:#f97316;border:1px solid rgba(249,115,22,.25);background:rgba(249,115,22,.08);padding:2px 9px;border-radius:4px;">MENTOR</span>
+        <span style="font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.08em;color:var(--f-orange);border:1px solid rgba(249,115,22,.25);background:rgba(249,115,22,.08);padding:2px 9px;border-radius:4px;">MENTOR</span>
         <span style="font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.08em;color:#a78bfa;border:1px solid rgba(167,139,250,.25);background:rgba(167,139,250,.08);padding:2px 9px;border-radius:4px;">SPEAKER</span>
-        <span style="font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.08em;color:#34d399;border:1px solid rgba(52,211,153,.25);background:rgba(52,211,153,.08);padding:2px 9px;border-radius:4px;">OPEN SOURCE</span>
+        <span style="font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.08em;color:var(--f-green);border:1px solid var(--f-green-border);background:var(--f-green-bg);padding:2px 9px;border-radius:4px;">OPEN SOURCE</span>
       </div>
 
-      <p style="font-size:.9rem;color:#475569;line-height:1.8;max-width:560px;margin:0 0 1.25rem 0;">
+      <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.8;max-width:560px;margin:0 0 1.25rem 0;">
         Fondateur de from0tohero.dev. 1100+ apprenants formés en Data Engineering dans 40+ pays.
       </p>
 
       <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
         <a href="https://github.com/diakite-data" target="_blank" class="profile-link">
-          <svg width="13" height="13" viewbox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:4px;"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.4-1.33-1.77-1.33-1.77-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.3.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1-.32 3.3 1.23.95-.27 1.97-.4 2.98-.4 1 0 2.03.13 2.97.4 2.3-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.6-2.8 5.63-5.48 5.93.43.37.82 1.1.82 2.22v3.29c0 .32.22.68.83.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"></path></svg>GitHub
+          <svg width="13" height="13" viewbox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.57v-2c-3.34.73-4.04-1.6-4.04-1.6-.54-1.4-1.33-1.77-1.33-1.77-1.08-.74.08-.73.08-.73 1.2.09 1.83 1.23 1.83 1.23 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.3.47-2.38 1.23-3.22-.12-.3-.53-1.52.12-3.18 0 0 1-.32 3.3 1.23.95-.27 1.97-.4 2.98-.4 1 0 2.03.13 2.97.4 2.3-1.55 3.3-1.23 3.3-1.23.65 1.66.24 2.88.12 3.18.77.84 1.23 1.9 1.23 3.22 0 4.6-2.8 5.63-5.48 5.93.43.37.82 1.1.82 2.22v3.29c0 .32.22.68.83.57C20.57 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"></path></svg>GitHub
         </a>
         <a href="https://www.linkedin.com/in/mamadou-youssouf-diakite-083630135" target="_blank" class="profile-link">
-          <svg width="13" height="13" viewbox="0 0 24 24" fill="currentColor" style="vertical-align:-2px;margin-right:4px;"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.93v5.68H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg>LinkedIn
+          <svg width="13" height="13" viewbox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.93v5.68H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.59 0 4.25 2.36 4.25 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"></path></svg>LinkedIn
         </a>
       </div>
     </div>
 
   </div>
 
-  <!-- COMPÉTENCES TECHNIQUES -->
+  <!-- COMPÉTENCES -->
   <div style="margin:3rem 0;">
     <span class="f-label" style="margin-bottom:1.75rem;">// compétences techniques</span>
     <div id="skills-container"></div>
@@ -220,13 +388,13 @@ ul.task-list li input[type="checkbox"] {
           <span style="font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:#60a5fa;border:1px solid rgba(96,165,250,.25);background:rgba(96,165,250,.08);padding:2px 9px;border-radius:4px;">DATA</span>
           <span class="f-tag">Bootcamp</span>
         </div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:#0f172a;margin:0 0 .5rem 0;">Data Engineering Bootcamp</h3>
-        <p style="font-size:.85rem;color:#475569;line-height:1.7;margin:0 0 1.1rem 0;">35 modules · 1100+ apprenants · 40+ pays. Le bootcamp Data Engineering complet en français.</p>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:var(--f-text-1);margin:0 0 .5rem 0;">Data Engineering Bootcamp</h3>
+        <p style="font-size:.85rem;color:var(--f-text-2);line-height:1.7;margin:0 0 1.1rem 0;">35 modules · 1100+ apprenants · 40+ pays. Le bootcamp Data Engineering complet en français.</p>
         <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:1.1rem;">
           <span class="f-tag">Python</span><span class="f-tag">Airflow</span><span class="f-tag">dbt</span>
           <span class="f-tag">Spark</span><span class="f-tag">GCP</span><span class="f-tag">Kafka</span>
         </div>
-        <span style="font-family:'Space Mono',monospace;font-size:.7rem;color:#0ea5e9;letter-spacing:.04em;">Demo →</span>
+        <span style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--f-sky);">Demo →</span>
       </div>
     </a>
   </div>
@@ -235,34 +403,17 @@ ul.task-list li input[type="checkbox"] {
 
 <script>
 const skillSections = [
-  {
-    label: "Langages & Frameworks",
-    items: ["Python","PySpark","Scala","Spark-Scala","R","RShiny","Julia","Bash","Spark ML","Spark Streaming","Pandas","NumPy","Scikit-learn","FastAPI"]
-  },
-  {
-    label: "Big Data & Streaming",
-    items: ["Apache Spark","Hadoop HDFS","Apache Kafka","Apache Airflow","Hive","Apache Flink","RabbitMQ"]
-  },
-  {
-    label: "Intelligence Artificielle & ML",
-    items: ["Machine Learning","Statistiques","Modélisation prédictive","Data Mining","Deep Learning","CNN","NLP","Generative AI","MLOps","Model Deployment"]
-  },
-  {
-    label: "Bases de Données & Stockage",
-    items: ["PostgreSQL","MySQL","Oracle","TeraData","MariaDB","Elasticsearch","MongoDB","Neo4J","Couchbase","AWS S3","MinIO","Google BigQuery"]
-  },
-  {
-    label: "Cloud & DevOps",
-    items: ["AWS","Google Cloud Platform","Microsoft Azure","Docker","Kubernetes","Microsoft Fabric","Power BI","CI/CD","GitLab","GitHub","Git","Rundeck"]
-  }
+  { label: "Langages & Frameworks", items: ["Python","PySpark","Scala","Spark-Scala","R","RShiny","Julia","Bash","Spark ML","Spark Streaming","Pandas","NumPy","Scikit-learn","FastAPI"] },
+  { label: "Big Data & Streaming",  items: ["Apache Spark","Hadoop HDFS","Apache Kafka","Apache Airflow","Hive","Apache Flink","RabbitMQ"] },
+  { label: "IA & ML",               items: ["Machine Learning","Statistiques","Modélisation prédictive","Data Mining","Deep Learning","CNN","NLP","Generative AI","MLOps","Model Deployment"] },
+  { label: "Bases de Données",      items: ["PostgreSQL","MySQL","Oracle","TeraData","MariaDB","Elasticsearch","MongoDB","Neo4J","Couchbase","AWS S3","MinIO","Google BigQuery"] },
+  { label: "Cloud & DevOps",        items: ["AWS","Google Cloud Platform","Microsoft Azure","Docker","Kubernetes","Microsoft Fabric","Power BI","CI/CD","GitLab","GitHub","Git","Rundeck"] }
 ];
 
 document.getElementById('skills-container').innerHTML = skillSections.map(sec => `
   <div style="margin-bottom:1.75rem;">
-    <p style="font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8;margin:0 0 .75rem 0;">${sec.label}</p>
-    <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
-      ${sec.items.map(s => `<span class="skill-tag">${s}</span>`).join('')}
-    </div>
+    <p style="font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--f-text-3);margin:0 0 .75rem 0;">${sec.label}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.4rem;">${sec.items.map(s => `<span class="skill-tag">${s}</span>`).join('')}</div>
   </div>
 `).join('');
 </script>
@@ -273,6 +424,19 @@ document.getElementById('skills-container').innerHTML = skillSections.map(sec =>
 
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

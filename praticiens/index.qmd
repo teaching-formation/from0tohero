@@ -7,20 +7,16 @@ page-layout: full
 
 <div style="padding:4rem 6vw;max-width:1200px;margin:0 auto;">
 
-  <!-- En-tête -->
   <div style="margin-bottom:2.5rem;">
     <span class="f-label" style="margin-bottom:.5rem;">// praticiens</span>
-    <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;color:#0f172a;margin:.4rem 0 .6rem 0;">Les gens qui construisent</h1>
-    <p style="color:#94a3b8;font-size:.88rem;margin:0 0 2rem 0;">Profils de praticiens tech — Data, DevOps, Cloud, IA, Cybersécurité, MLOps, Dev.</p>
+    <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;color:var(--f-text-1);margin:.4rem 0 .6rem 0;">Les gens qui construisent</h1>
+    <p style="color:var(--f-text-3);font-size:.88rem;margin:0 0 2rem 0;">Profils de praticiens tech — Data, DevOps, Cloud, IA, Cybersécurité, MLOps, Dev.</p>
 
-    <!-- Recherche -->
     <input id="search-input" type="text" placeholder="Rechercher par nom, rôle, ville, stack…"
       oninput="renderPraticiens(getFiltered())"
-      class="f-input"
-      style="margin-bottom:1.25rem;max-width:480px;"
+      class="f-input" style="margin-bottom:1.25rem;"
     />
 
-    <!-- Filtres -->
     <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
       <button class="filter-pill active" onclick="filterPraticiens('all', this)">Tous</button>
       <button class="filter-pill" onclick="filterPraticiens('open', this)">● Disponibles</button>
@@ -34,7 +30,7 @@ page-layout: full
   </div>
 
   <div id="praticiens-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem;"></div>
-  <p id="no-results" style="display:none;color:#94a3b8;font-family:'Space Mono',monospace;font-size:.85rem;margin-top:2rem;">Aucun praticien dans cette catégorie.</p>
+  <p id="no-results" style="display:none;color:var(--f-text-3);font-family:'Space Mono',monospace;font-size:.85rem;margin-top:2rem;">Aucun praticien dans cette catégorie.</p>
 
 </div>
 
@@ -49,8 +45,6 @@ const praticiens = [
     stack:        ["Python", "Airflow", "dbt", "Spark", "GCP"],
     category:     "data",
     open_to_work: false,
-    linkedin:     "https://www.linkedin.com/in/mamadou-youssouf-diakite-083630135",
-    github:       "https://github.com/diakite-data",
     bio:          "Fondateur de from0tohero.dev. 1100+ apprenants formés en Data Engineering.",
     badges:       ["MENTOR", "SPEAKER", "OPEN SOURCE"]
   }
@@ -62,11 +56,11 @@ function renderPraticiens(list) {
   if (!list.length) { grid.innerHTML = ''; noRes.style.display = 'block'; return; }
   noRes.style.display = 'none';
 
-  const badgeColors = {
-    'MENTOR':       { bg:'rgba(249,115,22,.08)', border:'rgba(249,115,22,.25)', color:'#f97316' },
-    'SPEAKER':      { bg:'rgba(167,139,250,.08)', border:'rgba(167,139,250,.25)', color:'#a78bfa' },
-    'OPEN SOURCE':  { bg:'rgba(52,211,153,.08)', border:'rgba(52,211,153,.25)', color:'#34d399' },
-    'CERTIFIÉ':     { bg:'rgba(96,165,250,.08)', border:'rgba(96,165,250,.25)', color:'#60a5fa' }
+  const badges = {
+    'MENTOR':      { color:'var(--f-orange)', border:'rgba(249,115,22,.25)', bg:'rgba(249,115,22,.08)' },
+    'SPEAKER':     { color:'#a78bfa',         border:'rgba(167,139,250,.25)', bg:'rgba(167,139,250,.08)' },
+    'OPEN SOURCE': { color:'var(--f-green)',   border:'rgba(52,211,153,.25)', bg:'rgba(52,211,153,.08)' },
+    'CERTIFIÉ':    { color:'var(--f-sky)',      border:'var(--f-sky-border)',  bg:'var(--f-sky-bg)' }
   };
 
   grid.innerHTML = list.map(p => {
@@ -75,37 +69,36 @@ function renderPraticiens(list) {
     <a href="${p.slug}.html" class="f-card-link">
       <div class="f-card f-card-hover" style="display:flex;flex-direction:column;gap:.85rem;">
 
-        <!-- Header -->
         <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;">
           <div style="display:flex;align-items:center;gap:.85rem;">
             <div class="profile-avatar" style="width:48px;height:48px;font-size:1rem;border-radius:10px;">${initials}</div>
             <div>
-              <p style="font-family:'Syne',sans-serif;font-size:.98rem;font-weight:700;color:#0f172a;margin:0;">${p.name}</p>
-              <p style="font-family:'Space Mono',monospace;font-size:.68rem;color:#0ea5e9;margin:.15rem 0 0 0;">${p.role}</p>
+              <p style="font-family:'Syne',sans-serif;font-size:.98rem;font-weight:700;color:var(--f-text-1);margin:0;">${p.name}</p>
+              <p style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--f-sky);margin:.15rem 0 0 0;">${p.role}</p>
             </div>
           </div>
           <span style="font-size:1.1rem;flex-shrink:0;">${p.country}</span>
         </div>
 
-        ${p.badges && p.badges.length ? `
+        ${p.badges?.length ? `
         <div style="display:flex;flex-wrap:wrap;gap:.35rem;">
           ${p.badges.map(b => {
-            const c = badgeColors[b] || { bg:'rgba(148,163,184,.08)', border:'rgba(148,163,184,.25)', color:'#94a3b8' };
+            const c = badges[b] || { color:'var(--f-text-3)', border:'var(--f-border)', bg:'var(--f-surface)' };
             return `<span style="font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:${c.color};border:1px solid ${c.border};background:${c.bg};padding:2px 8px;border-radius:4px;">${b}</span>`;
           }).join('')}
         </div>` : ''}
 
-        <p style="font-size:.83rem;color:#475569;line-height:1.7;margin:0;">${p.bio}</p>
+        <p style="font-size:.83rem;color:var(--f-text-2);line-height:1.7;margin:0;">${p.bio}</p>
 
         <div style="display:flex;flex-wrap:wrap;gap:.35rem;">
           ${p.stack.map(s => `<span class="f-tag">${s}</span>`).join('')}
         </div>
 
         <div style="display:flex;justify-content:space-between;align-items:center;">
-          <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#94a3b8;">${p.city}</span>
+          <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--f-text-3);">${p.city}</span>
           ${p.open_to_work
-            ? `<span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#10b981;display:flex;align-items:center;gap:.3rem;"><span style="width:6px;height:6px;background:#10b981;border-radius:50%;display:inline-block;"></span>disponible</span>`
-            : `<span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#cbd5e1;">○ non dispo</span>`
+            ? `<span style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--f-green);display:inline-flex;align-items:center;gap:.35rem;"><span style="width:6px;height:6px;background:var(--f-green);border-radius:50%;display:inline-block;"></span>disponible</span>`
+            : `<span style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--f-border-2);">○ non dispo</span>`
           }
         </div>
 
