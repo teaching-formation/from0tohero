@@ -15,13 +15,13 @@ website:
 
   twitter-card:
     title: "from0tohero.dev"
-    description: "La plateforme des praticiens "
+    description: "La plateforme des praticiens"
     image: assets/img/og-banner.png
     card-style: summary_large_image
 
   navbar:
-    background: "#0a0b0f"
-    foreground: "#e8e4d9"
+    background: "white"
+    foreground: "#0f172a"
     pinned: true
     logo: assets/img/logo.svg
     logo-alt: "from0tohero.dev"
@@ -42,8 +42,8 @@ website:
         href: "https://github.com/diakite-data"
 
   page-footer:
-    background: "#0a0b0f"
-    foreground: "#6b7280"
+    background: "#0f172a"
+    foreground: "#64748b"
     border: false
     left: "© 2026 from0tohero.dev"
     right: "Construit par DIAKITE MAMADOU YOUSSOUF & pour les praticiens 🌍"
@@ -58,13 +58,12 @@ website:
 
 format:
   html:
-    theme:
-      dark: [darkly, assets/css/theme.scss]
+    theme: [flatly, assets/css/theme.scss]
     css: assets/css/custom.css
     toc: false
     anchor-sections: false
     smooth-scroll: true
-    highlight-style: dracula
+    highlight-style: github
     include-in-header: assets/js/head-scripts.html
     include-after-body: assets/js/body-scripts.html
     page-layout: full

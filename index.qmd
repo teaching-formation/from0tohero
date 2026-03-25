@@ -6,96 +6,112 @@ page-layout: full
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- ── HERO ── -->
-<section style="min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding: 0 6vw; max-width:1200px; margin:0 auto;">
+<section class="hero-dot-bg" style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 6vw;max-width:1200px;margin:0 auto;">
 
-  <p style="font-family:'Space Mono',monospace; font-size:0.72rem; letter-spacing:0.18em; color:#0ea5e9; text-transform:uppercase; margin-bottom:1.5rem;">
-    <span style="color:#00e676;">●</span> &nbsp;from0tohero.dev — v1.0
-  </p>
+  <div style="margin-bottom:1.75rem;">
+    <span class="badge-live"><span class="dot"></span>from0tohero.dev — v1.0</span>
+  </div>
 
-  <h1 style="font-family:'Syne',sans-serif; font-size:clamp(2.8rem,7vw,6rem); font-weight:800; line-height:1.05; color:#0f172a; margin:0 0 1.5rem 0;">
+  <h1 style="font-family:'Syne',sans-serif;font-size:clamp(3rem,8vw,6.5rem);font-weight:800;line-height:1.02;color:#0f172a;margin:0 0 1.5rem 0;">
     Du terrain.<br>
-    <span style="color:#0ea5e9;">Pas des slides.</span>
+    <span class="text-gradient">Pas des slides.</span>
   </h1>
 
-  <p style="font-size:1.05rem; color:#475569; max-width:500px; line-height:1.8; margin-bottom:2.5rem;">
-    Articles, réalisations et profils de praticiens tech —
+  <p style="font-size:1.08rem;color:#475569;max-width:480px;line-height:1.9;margin-bottom:3rem;">
+    Articles, réalisations et profils de praticiens tech —<br>
     Data, DevOps, Cloud, IA, Cybersécurité, Dev.
   </p>
 
-  <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:5rem;">
-    <a href="praticiens/index.html"
-       style="background:#f97316; color:#fff; font-family:'Space Mono',monospace;
-              font-size:0.78rem; font-weight:700; letter-spacing:0.08em;
-              text-transform:uppercase; padding:0.75rem 1.6rem;
-              border-radius:2px; text-decoration:none;">
-      Voir les praticiens
-    </a>
-    <a href="soumettre/index.html"
-       style="background:transparent; color:#0f172a; font-family:'Space Mono',monospace;
-              font-size:0.78rem; letter-spacing:0.08em; text-transform:uppercase;
-              padding:0.75rem 1.6rem; border-radius:2px;
-              border:1px solid #bae6fd; text-decoration:none;">
-      Soumettre mon profil
-    </a>
+  <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+    <a href="praticiens/index.html" class="btn-f btn-f-primary">Voir les praticiens →</a>
+    <a href="soumettre/index.html" class="btn-f btn-f-secondary">Soumettre mon profil</a>
   </div>
 
 </section>
+
+<hr class="f-hr">
 
 <!-- ── STATS ── -->
-<section style="padding:3rem 6vw; border-top:1px solid #bae6fd; max-width:1200px; margin:0 auto;">
-  <div style="display:flex; flex-wrap:wrap; gap:2rem;">
-    <div>
-      <p style="font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:#0ea5e9; margin:0;">1</p>
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; color:#94a3b8; text-transform:uppercase; margin:0.2rem 0 0 0;">Praticien</p>
-    </div>
-    <div>
-      <p style="font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:#0ea5e9; margin:0;">1</p>
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; color:#94a3b8; text-transform:uppercase; margin:0.2rem 0 0 0;">Pays</p>
-    </div>
-    <div>
-      <p style="font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:#0ea5e9; margin:0;">1</p>
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; color:#94a3b8; text-transform:uppercase; margin:0.2rem 0 0 0;">Réalisation</p>
-    </div>
-    <div>
-      <p style="font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:#0ea5e9; margin:0;">0</p>
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; color:#94a3b8; text-transform:uppercase; margin:0.2rem 0 0 0;">Articles</p>
-    </div>
+<section style="padding:3.5rem 6vw;max-width:1200px;margin:0 auto;">
+  <div style="display:flex;flex-wrap:wrap;gap:4rem;">
+    <div><p class="stat-num">1</p><p class="stat-label">Praticien</p></div>
+    <div><p class="stat-num">1</p><p class="stat-label">Pays</p></div>
+    <div><p class="stat-num">1</p><p class="stat-label">Réalisation</p></div>
+    <div><p class="stat-num">0</p><p class="stat-label">Articles</p></div>
   </div>
 </section>
 
-<!-- ── SECTION ARTICLES ── -->
-<section style="padding:5rem 6vw; border-top:1px solid #bae6fd; max-width:1200px; margin:0 auto;">
+<hr class="f-hr">
 
-  <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// articles</p>
-    <h2 style="font-family:'Syne',sans-serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Ce que les praticiens écrivent</h2>
-    <p style="color:#94a3b8; font-size:0.9rem; margin:0;">Articles publiés sur Medium, LinkedIn, Dev.to — agrégés ici.</p>
+<!-- ── COMMENT ÇA MARCHE ── -->
+<section style="padding:5.5rem 6vw;max-width:1200px;margin:0 auto;">
+
+  <span class="f-label" style="margin-bottom:.5rem;">// comment ça marche</span>
+  <h2 style="font-family:'Syne',sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:#0f172a;margin:.4rem 0 3rem 0;">
+    Figurer sur from0tohero.dev en 3 étapes.
+  </h2>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;margin-bottom:2.5rem;">
+
+    <div class="f-card" style="cursor:default;">
+      <div class="step-num">01</div>
+      <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#0f172a;margin:0 0 .6rem 0;">Crée ton profil</h3>
+      <p style="font-size:.85rem;color:#475569;line-height:1.75;margin:0 0 1.25rem 0;">Nom, rôle, stack, bio et liens. C'est l'étape fondatrice — elle ancre tout le reste sur la plateforme.</p>
+      <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#94a3b8;">⏱ ~2 minutes</span>
+    </div>
+
+    <div class="f-card" style="cursor:default;">
+      <div class="step-num">02</div>
+      <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#0f172a;margin:0 0 .6rem 0;">Soumets une réalisation ou un article</h3>
+      <p style="font-size:.85rem;color:#475569;line-height:1.75;margin:0 0 1.25rem 0;">Pipeline, dashboard, API, bootcamp, article Medium ou LinkedIn — ce que tu as vraiment construit.</p>
+      <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#94a3b8;">Optionnel · illimité</span>
+    </div>
+
+    <div class="f-card" style="cursor:default;">
+      <div class="step-num done">03</div>
+      <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#0f172a;margin:0 0 .6rem 0;">Publication sous 48h</h3>
+      <p style="font-size:.85rem;color:#475569;line-height:1.75;margin:0 0 1.25rem 0;">Ton profil apparaît dans l'annuaire. Visible par des milliers de praticiens et recruteurs.</p>
+      <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#10b981;">✓ Délai max · 48h</span>
+    </div>
+
   </div>
 
-  <p style="font-family:'Space Mono',monospace; font-size:0.82rem; color:#94a3b8; margin-bottom:2rem;">
-    Les premiers articles arrivent bientôt. Tu en as un à partager ?
-  </p>
-
-  <a href="soumettre/index.html" style="font-family:'Space Mono',monospace; font-size:0.78rem; color:#0ea5e9; text-decoration:none; letter-spacing:0.08em; text-transform:uppercase;">Soumettre un article →</a>
+  <a href="soumettre/index.html" class="btn-f btn-f-primary">Commencer maintenant →</a>
 
 </section>
 
-<!-- ── SECTION BOOTCAMP ── -->
-<section style="padding:5rem 6vw; border-top:1px solid #bae6fd; max-width:1200px; margin:0 auto;">
+<hr class="f-hr">
 
-  <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// bootcamps</p>
-    <h2 style="font-family:'Syne',sans-serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Apprendre par la pratique</h2>
+<!-- ── ARTICLES ── -->
+<section style="padding:5.5rem 6vw;max-width:1200px;margin:0 auto;">
+
+  <span class="f-label" style="margin-bottom:.5rem;">// articles</span>
+  <h2 style="font-family:'Syne',sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:#0f172a;margin:.4rem 0 .6rem 0;">Ce que les praticiens écrivent</h2>
+  <p style="color:#94a3b8;font-size:.88rem;margin:0 0 2.5rem 0;">Articles publiés sur Medium, LinkedIn, Dev.to — agrégés ici.</p>
+
+  <div class="empty-state">
+    <p style="font-family:'Space Mono',monospace;font-size:.82rem;color:#94a3b8;margin:0 0 1.5rem 0;">Les premiers articles arrivent bientôt. Tu en as un à partager ?</p>
+    <a href="soumettre/index.html" class="btn-f btn-f-secondary" style="font-size:.72rem;">Soumettre un article →</a>
   </div>
 
-  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem;">
+</section>
 
-    <a href="https://diakite-data.github.io/data-engineering-bootcamp/" style="text-decoration:none;" target="_blank">
-      <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:2rem; transition:border-color 0.2s;">
-        <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#00e676; margin-bottom:1rem;">● live</p>
-        <h3 style="font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Data Engineering</h3>
-        <p style="font-size:0.85rem; color:#475569; margin-bottom:1.5rem;">Python · Airflow · dbt · Spark · GCP · Kafka</p>
-        <div style="display:flex; gap:2rem; font-family:'Space Mono',monospace; font-size:0.72rem; color:#94a3b8;">
+<hr class="f-hr">
+
+<!-- ── BOOTCAMPS ── -->
+<section style="padding:5.5rem 6vw;max-width:1200px;margin:0 auto;">
+
+  <span class="f-label" style="margin-bottom:.5rem;">// bootcamps</span>
+  <h2 style="font-family:'Syne',sans-serif;font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:#0f172a;margin:.4rem 0 2.5rem 0;">Apprendre par la pratique</h2>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;">
+
+    <a href="https://diakite-data.github.io/data-engineering-bootcamp/" class="f-card-link" target="_blank">
+      <div class="f-card f-card-hover">
+        <span class="badge-live" style="margin-bottom:1.25rem;"><span class="dot"></span>live</span>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:#0f172a;margin:.75rem 0 .5rem 0;">Data Engineering</h3>
+        <p style="font-size:.83rem;color:#475569;margin:0 0 1.5rem 0;line-height:1.6;">Python · Airflow · dbt · Spark · GCP · Kafka</p>
+        <div style="display:flex;gap:1.5rem;font-family:'Space Mono',monospace;font-size:.67rem;color:#94a3b8;flex-wrap:wrap;">
           <span>35 modules</span>
           <span>1 100+ apprenants</span>
           <span>40+ pays</span>
@@ -103,14 +119,12 @@ page-layout: full
       </div>
     </a>
 
-    <a href="https://da.from0tohero.dev" style="text-decoration:none;" target="_blank">
-      <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:2rem;">
-        <p style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:#94a3b8; margin-bottom:1rem;">○ coming soon</p>
-        <h3 style="font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Data Analyst</h3>
-        <p style="font-size:0.85rem; color:#475569; margin-bottom:1.5rem;">SQL · Python · Power BI · Tableau · Stats</p>
-        <div style="display:flex; gap:2rem; font-family:'Space Mono',monospace; font-size:0.72rem; color:#94a3b8;">
-          <span>En construction</span>
-        </div>
+    <a href="https://da.from0tohero.dev" class="f-card-link" target="_blank">
+      <div class="f-card" style="opacity:.72;">
+        <span style="font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#94a3b8;display:block;margin-bottom:1.25rem;">○ coming soon</span>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:#0f172a;margin:0 0 .5rem 0;">Data Analyst</h3>
+        <p style="font-size:.83rem;color:#475569;margin:0 0 1.5rem 0;line-height:1.6;">SQL · Python · Power BI · Tableau · Stats</p>
+        <span style="font-family:'Space Mono',monospace;font-size:.67rem;color:#94a3b8;">En construction</span>
       </div>
     </a>
 
@@ -118,63 +132,15 @@ page-layout: full
 
 </section>
 
-<!-- ── COMMENT ÇA MARCHE ── -->
-<section style="padding:5rem 6vw; border-top:1px solid #bae6fd; max-width:1200px; margin:0 auto;">
-
-  <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// comment ça marche</p>
-    <h2 style="font-family:'Syne',sans-serif; font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; color:#0f172a; margin:0;">Figurer sur from0tohero.dev en 3 étapes.</h2>
-  </div>
-
-  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1.25rem;">
-
-    <!-- Étape 1 -->
-    <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem; position:relative;">
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1rem;">01</p>
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Crée ton profil</h3>
-      <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0 0 1rem 0;">Nom, rôle, stack, bio et liens. C'est l'étape obligatoire — elle ancre tout le reste.</p>
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; color:#94a3b8;">~2 minutes</p>
-    </div>
-
-    <!-- Étape 2 -->
-    <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem;">
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1rem;">02</p>
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Soumets une réalisation ou un article</h3>
-      <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0 0 1rem 0;">Pipeline, dashboard, API, bootcamp, article Medium ou LinkedIn — ce que tu as vraiment construit.</p>
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; color:#94a3b8;">Optionnel · illimité</p>
-    </div>
-
-    <!-- Étape 3 -->
-    <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem;">
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#00e676; margin-bottom:1rem;">03</p>
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Validation & publication</h3>
-      <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0 0 1rem 0;">Ton profil apparaît sur le site sous 48h.</p>
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; color:#94a3b8;">Délai max · 48h</p>
-    </div>
-
-  </div>
-
-  <div style="margin-top:2rem;">
-    <a href="soumettre/index.html"
-       style="font-family:'Space Mono',monospace; font-size:0.78rem; font-weight:700; letter-spacing:0.08em;
-              text-transform:uppercase; color:#0ea5e9; text-decoration:none;">
-      Commencer →
-    </a>
-  </div>
-
-</section>
+<hr class="f-hr">
 
 <!-- ── CTA FINAL ── -->
-<section style="padding:6rem 6vw; border-top:1px solid #bae6fd; text-align:center; max-width:1200px; margin:0 auto;">
-  <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:1rem;">// tu es praticien ?</p>
-  <h2 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,3rem); font-weight:800; color:#0f172a; margin:0 0 1rem 0;">Montre ce que tu construis.</h2>
-  <p style="color:#94a3b8; font-size:0.95rem; margin-bottom:2rem;">Profil · Articles · Réalisations — tout en 5 minutes.</p>
-  <a href="soumettre/index.html"
-     style="background:#f97316; color:#fff; font-family:'Space Mono',monospace;
-            font-size:0.8rem; font-weight:700; letter-spacing:0.08em;
-            text-transform:uppercase; padding:0.85rem 2rem;
-            border-radius:2px; text-decoration:none;">
-    Soumettre →
-  </a>
+<section style="padding:8rem 6vw;max-width:1200px;margin:0 auto;text-align:center;">
+  <span class="f-label" style="margin-bottom:1rem;">// tu es praticien ?</span>
+  <h2 style="font-family:'Syne',sans-serif;font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;color:#0f172a;margin:1rem 0 1rem 0;line-height:1.05;">
+    Montre ce que<br><span class="text-gradient">tu construis.</span>
+  </h2>
+  <p style="color:#94a3b8;font-size:.95rem;margin:0 0 2.5rem 0;line-height:1.8;">Profil · Articles · Réalisations — tout en 5 minutes.</p>
+  <a href="soumettre/index.html" class="btn-f btn-f-primary" style="font-size:.82rem;padding:.9rem 2.5rem;">Soumettre →</a>
 </section>
 ```

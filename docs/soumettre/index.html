@@ -38,14 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ed6fbf5960054c7217a592cfdda8c31.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ed6fbf5960054c7217a592cfdda8c31.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7ed6fbf5960054c7217a592cfdda8c31.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6455e7f669de2dd1a1df5401145d73d4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cda454664b8444bc34ca7feaf1b6d121.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-542e0521164b4760879b59214ffd40c8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-cda454664b8444bc34ca7feaf1b6d121.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3ebfdd283416a7efcc58c794f869134e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -87,167 +83,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
-    const toggleBodyColorMode = (bsSheetEl) => {
-      const mode = bsSheetEl.getAttribute("data-mode");
-      const bodyEl = window.document.querySelector("body");
-      if (mode === "dark") {
-        bodyEl.classList.add("quarto-dark");
-        bodyEl.classList.remove("quarto-light");
-      } else {
-        bodyEl.classList.add("quarto-light");
-        bodyEl.classList.remove("quarto-dark");
-      }
-    }
-    const toggleBodyColorPrimary = () => {
-      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
-      if (bsSheetEl) {
-        toggleBodyColorMode(bsSheetEl);
-      }
-    }
-    const setColorSchemeToggle = (alternate) => {
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
-    };
-    const toggleColorMode = (alternate) => {
-      // Switch the stylesheets
-      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
-      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-      manageTransitions('#quarto-margin-sidebar .nav-link', false);
-      if (alternate) {
-        // note: dark is layered on light, we don't disable primary!
-        enableStylesheet(alternateStylesheets);
-        for (const sheetNode of alternateStylesheets) {
-          if (sheetNode.id === "quarto-bootstrap") {
-            toggleBodyColorMode(sheetNode);
-          }
-        }
-      } else {
-        disableStylesheet(alternateStylesheets);
-        enableStylesheet(primaryStylesheets)
-        toggleBodyColorPrimary();
-      }
-      manageTransitions('#quarto-margin-sidebar .nav-link', true);
-      // Switch the toggles
-      setColorSchemeToggle(alternate)
-      // Hack to workaround the fact that safari doesn't
-      // properly recolor the scrollbar when toggling (#1455)
-      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-        manageTransitions("body", false);
-        window.scrollTo(0, 1);
-        setTimeout(() => {
-          window.scrollTo(0, 0);
-          manageTransitions("body", true);
-        }, 40);
-      }
-    }
-    const disableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        stylesheet.rel = 'disabled-stylesheet';
-      }
-    }
-    const enableStylesheet = (stylesheets) => {
-      for (let i=0; i < stylesheets.length; i++) {
-        const stylesheet = stylesheets[i];
-        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
-          stylesheet.rel = 'stylesheet';
-        }
-      }
-    }
-    const manageTransitions = (selector, allowTransitions) => {
-      const els = window.document.querySelectorAll(selector);
-      for (let i=0; i < els.length; i++) {
-        const el = els[i];
-        if (allowTransitions) {
-          el.classList.remove('notransition');
-        } else {
-          el.classList.add('notransition');
-        }
-      }
-    }
-    const isFileUrl = () => {
-      return window.location.protocol === 'file:';
-    }
-    const hasAlternateSentinel = () => {
-      let styleSentinel = getColorSchemeSentinel();
-      if (styleSentinel !== null) {
-        return styleSentinel === "alternate";
-      } else {
-        return false;
-      }
-    }
-    const setStyleSentinel = (alternate) => {
-      const value = alternate ? "alternate" : "default";
-      if (!isFileUrl()) {
-        window.localStorage.setItem("quarto-color-scheme", value);
-      } else {
-        localAlternateSentinel = value;
-      }
-    }
-    const getColorSchemeSentinel = () => {
-      if (!isFileUrl()) {
-        const storageValue = window.localStorage.getItem("quarto-color-scheme");
-        return storageValue != null ? storageValue : localAlternateSentinel;
-      } else {
-        return localAlternateSentinel;
-      }
-    }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(authorPrefersDark) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    };
-    const authorPrefersDark = true;
-    const darkModeDefault = authorPrefersDark;
-    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-    // Dark / light mode switch
-    window.quartoToggleColorScheme = () => {
-      // Read the current dark / light value
-      let toAlternate = !hasAlternateSentinel();
-      toggleColorMode(toAlternate);
-      setStyleSentinel(toAlternate);
-      toggleGiscusIfUsed(toAlternate, darkModeDefault);
-      window.dispatchEvent(new Event('resize'));
-    };
-    // Switch to dark mode if need be
-    if (hasAlternateSentinel()) {
-      toggleColorMode(true);
-    } else {
-      toggleColorMode(false);
-    }
-  </script>
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -295,7 +131,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Basculer le mode sombre"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -311,94 +146,93 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
 
-<div style="padding:3rem 6vw; max-width:800px; margin:0 auto;">
+<div style="padding:4rem 6vw;max-width:820px;margin:0 auto;">
 
-  <div style="margin-bottom:3rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// soumettre</p>
-    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#0f172a; margin:0 0 0.75rem 0;">Montre ce que tu construis.</h1>
-    <p style="color:#94a3b8; font-size:0.95rem; line-height:1.8; max-width:520px;">
+  <!-- En-tête -->
+  <div style="margin-bottom:3.5rem;">
+    <span class="f-label" style="margin-bottom:.6rem;">// soumettre</span>
+    <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;color:#0f172a;margin:.4rem 0 .8rem 0;">
+      Montre ce que tu construis.
+    </h1>
+    <p style="color:#94a3b8;font-size:.95rem;line-height:1.85;max-width:500px;margin:0;">
       Tu es praticien tech ? Soumets ton profil, un article ou une réalisation.
-      Je valide et publie sous 48h.
     </p>
   </div>
 
-  <!-- 3 cartes -->
-  <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.25rem; margin-bottom:3rem;">
+  <!-- 3 cartes de sélection -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-bottom:3rem;">
 
     <!-- Profil -->
-    <div id="card-profil" onclick="showForm('profil')" style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="if(activeForm!='profil') this.style.borderColor='#bae6fd'">
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1rem;">01</p>
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Mon profil</h3>
-      <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0;">Figurer dans l'annuaire des praticiens.</p>
+    <div id="card-profil" class="submit-card" onclick="showForm('profil')">
+      <div class="submit-icon" style="background:rgba(14,165,233,.1);">👤</div>
+      <p class="f-label" style="margin-bottom:.5rem;font-size:.65rem;">01</p>
+      <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#0f172a;margin:0 0 .4rem 0;">Mon profil</h3>
+      <p style="font-size:.82rem;color:#475569;line-height:1.6;margin:0;">Figurer dans l'annuaire des praticiens.</p>
     </div>
 
     <!-- Article -->
-    <div id="card-article" onclick="showForm('article')" style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="if(activeForm!='article') this.style.borderColor='#bae6fd'">
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1rem;">02</p>
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Un article</h3>
-      <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0;">Partager un article publié sur Medium, LinkedIn, Dev.to...</p>
+    <div id="card-article" class="submit-card" onclick="showForm('article')">
+      <div class="submit-icon" style="background:rgba(249,115,22,.1);">✍️</div>
+      <p class="f-label" style="margin-bottom:.5rem;font-size:.65rem;">02</p>
+      <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#0f172a;margin:0 0 .4rem 0;">Un article</h3>
+      <p style="font-size:.82rem;color:#475569;line-height:1.6;margin:0;">Partager un article publié sur Medium, LinkedIn, Dev.to…</p>
     </div>
 
     <!-- Réalisation -->
-    <div id="card-realisation" onclick="showForm('realisation')" style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem; cursor:pointer; transition:border-color 0.2s;" onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="if(activeForm!='realisation') this.style.borderColor='#bae6fd'">
-      <p style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; color:#0ea5e9; margin-bottom:1rem;">03</p>
-      <h3 style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Une réalisation</h3>
-      <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0;">Pipeline, dashboard, API, bootcamp, chaîne YT...</p>
+    <div id="card-realisation" class="submit-card" onclick="showForm('realisation')">
+      <div class="submit-icon" style="background:rgba(16,185,129,.1);">🚀</div>
+      <p class="f-label" style="margin-bottom:.5rem;font-size:.65rem;">03</p>
+      <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#0f172a;margin:0 0 .4rem 0;">Une réalisation</h3>
+      <p style="font-size:.82rem;color:#475569;line-height:1.6;margin:0;">Pipeline, dashboard, API, bootcamp, chaîne YT…</p>
     </div>
 
   </div>
 
-  <!-- Zone formulaire Tally -->
+  <!-- Zone formulaire -->
   <div id="form-zone" style="display:none;">
 
-    <div style="border-top:1px solid #bae6fd; padding-top:2rem;">
-      <p id="form-label" style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#0ea5e9; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1.5rem;"></p>
+    <hr class="f-hr" style="margin-bottom:2rem;">
 
-      <!-- Gate : as-tu déjà un profil ? -->
-      <div id="gate-profil" style="display:none; background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.75rem; margin-bottom:1.5rem;">
-        <p style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0 0 0.5rem 0;">Tu as déjà un profil sur from0tohero.dev ?</p>
-        <p style="font-size:0.83rem; color:#475569; margin:0 0 1.5rem 0;">Un profil est requis pour lier ta soumission à un praticien.</p>
-        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-          <button onclick="gateAnswer(true)" style="font-family:'Space Mono',monospace; font-size:0.75rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
-                   background:#f97316; color:#fff; border:none; padding:0.65rem 1.4rem; border-radius:2px; cursor:pointer;">
-            Oui, j'ai un profil →
-          </button>
-          <button onclick="gateAnswer(false)" style="font-family:'Space Mono',monospace; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase;
-                   background:transparent; color:#0f172a; border:1px solid #bae6fd; padding:0.65rem 1.4rem; border-radius:2px; cursor:pointer;">
-            Non, je n'en ai pas encore
-          </button>
-        </div>
+    <span id="form-label" class="form-step-label"></span>
+
+    <!-- Gate : as-tu déjà un profil ? -->
+    <div id="gate-profil" class="gate-box" style="display:none;">
+      <h3 style="font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;color:#0f172a;margin:0 0 .4rem 0;">Tu as déjà un profil sur from0tohero.dev ?</h3>
+      <p style="font-size:.83rem;color:#94a3b8;margin:0 0 1.75rem 0;">Un profil est requis pour lier ta soumission à un praticien.</p>
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap;">
+        <button class="btn-f btn-f-primary" onclick="gateAnswer(true)" style="font-size:.72rem;">Oui, j'ai un profil →</button>
+        <button class="btn-f btn-f-secondary" onclick="gateAnswer(false)" style="font-size:.72rem;">Non, je n'en ai pas encore</button>
       </div>
-
-      <!-- Rappel après redirection vers profil -->
-      <div id="reminder-banner" style="display:none; background:#0ea5e91a; border:1px solid #0ea5e933; border-radius:6px; padding:1rem 1.25rem; margin-bottom:1.5rem;">
-        <p style="font-family:'Space Mono',monospace; font-size:0.75rem; color:#0ea5e9; margin:0 0 0.75rem 0; letter-spacing:0.06em;">
-          Remplis le formulaire ci-dessous · Une fois soumis, clique sur Continuer.
-        </p>
-        <button onclick="goToNext()" style="font-family:'Space Mono',monospace; font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase;
-                 background:#f97316; color:#fff; border:none; padding:0.55rem 1.2rem; border-radius:2px; cursor:pointer;">
-          J'ai soumis mon profil → Continuer
-        </button>
-      </div>
-
-      <!-- Script Tally officiel (nécessaire pour les events postMessage) -->
-      <script src="https://tally.so/widgets/embed.js"></script>
-
-      <!-- Tally iframes — un seul visible à la fois -->
-      <iframe id="tally-profil" style="display:none; width:100%; border:none; border-radius:6px; min-height:600px;" src="https://tally.so/embed/GxLlv2?hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy">
-      </iframe>
-
-      <iframe id="tally-article" style="display:none; width:100%; border:none; border-radius:6px; min-height:600px;" src="https://tally.so/embed/BzZ7zA?hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy">
-      </iframe>
-
-      <iframe id="tally-realisation" style="display:none; width:100%; border:none; border-radius:6px; min-height:600px;" src="https://tally.so/embed/q4OVLk?hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy">
-      </iframe>
-
     </div>
+
+    <!-- Rappel après profil -->
+    <div id="reminder-banner" class="reminder-box" style="display:none;">
+      <p style="font-family:'Space Mono',monospace;font-size:.73rem;color:#0ea5e9;margin:0;letter-spacing:.05em;line-height:1.6;">
+        Remplis le formulaire ci-dessous · Une fois soumis, clique sur Continuer.
+      </p>
+      <button class="btn-f btn-f-sky" onclick="goToNext()" style="font-size:.7rem;padding:.6rem 1.2rem;">
+        ✓ J'ai soumis mon profil → Continuer
+      </button>
+    </div>
+
+    <!-- Tally embed.js -->
+    <script src="https://tally.so/widgets/embed.js"></script>
+
+    <!-- Iframes Tally -->
+    <iframe id="tally-profil" style="display:none;width:100%;border:none;border-radius:12px;min-height:600px;" src="https://tally.so/embed/GxLlv2?hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy">
+    </iframe>
+
+    <iframe id="tally-article" style="display:none;width:100%;border:none;border-radius:12px;min-height:600px;" src="https://tally.so/embed/BzZ7zA?hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy">
+    </iframe>
+
+    <iframe id="tally-realisation" style="display:none;width:100%;border:none;border-radius:12px;min-height:600px;" src="https://tally.so/embed/q4OVLk?hideTitle=1&amp;transparentBackground=1&amp;dynamicHeight=1" loading="lazy">
+    </iframe>
+
   </div>
 
-  <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#94a3b8; margin-top:3rem; line-height:1.8;">
+  <p style="font-family:'Space Mono',monospace;font-size:.7rem;color:#94a3b8;margin-top:3rem;line-height:1.8;">
     Délai de publication : 48h max.
   </p>
 
@@ -408,39 +242,31 @@ ul.task-list li input[type="checkbox"] {
 let activeForm = null;
 
 function showForm(type) {
-  // Reset cartes
   ['profil','article','realisation'].forEach(t => {
-    document.getElementById('card-' + t).style.borderColor = '#bae6fd';
+    const c = document.getElementById('card-' + t);
+    c.classList.remove('selected');
   });
-
-  // Active la carte cliquée
-  document.getElementById('card-' + type).style.borderColor = '#0ea5e9';
+  document.getElementById('card-' + type).classList.add('selected');
   activeForm = type;
 
-  // Cache tous les iframes et la gate profil
   ['profil','article','realisation'].forEach(t => {
     document.getElementById('tally-' + t).style.display = 'none';
   });
   document.getElementById('gate-profil').style.display = 'none';
+  document.getElementById('reminder-banner').style.display = 'none';
 
   if (type === 'profil') {
-    // Profil → formulaire direct
     document.getElementById('form-label').textContent = '01 — Soumettre mon profil';
     document.getElementById('tally-profil').style.display = 'block';
     document.getElementById('form-zone').style.display = 'block';
   } else {
-    // Article ou Réalisation → vérifier d'abord si profil existant
-    const labels = {
-      article:     '02 — Soumettre un article',
-      realisation: '03 — Soumettre une réalisation'
-    };
+    const labels = { article: '02 — Soumettre un article', realisation: '03 — Soumettre une réalisation' };
     document.getElementById('form-label').textContent = labels[type];
     document.getElementById('gate-profil').style.display = 'block';
     document.getElementById('gate-profil').dataset.target = type;
     document.getElementById('form-zone').style.display = 'block';
   }
 
-  // Scroll vers le formulaire
   document.getElementById('form-zone').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
@@ -449,62 +275,41 @@ function gateAnswer(hasProfile) {
   document.getElementById('gate-profil').style.display = 'none';
 
   if (hasProfile) {
-    // A déjà un profil → formulaire cible direct
     document.getElementById('tally-' + type).style.display = 'block';
   } else {
-    // Pas encore de profil → formulaire profil en premier
     document.getElementById('form-label').textContent = '01 — Crée ton profil d\'abord';
     document.getElementById('tally-profil').style.display = 'block';
-    // Affiche le bouton Continuer immédiatement, visible après soumission
     document.getElementById('reminder-banner').dataset.next = type;
-    document.getElementById('reminder-banner').style.display = 'block';
-    // Reset carte active visuellement
-    ['profil','article','realisation'].forEach(t => {
-      document.getElementById('card-' + t).style.borderColor = '#bae6fd';
-    });
-    document.getElementById('card-profil').style.borderColor = '#0ea5e9';
+    document.getElementById('reminder-banner').style.display = 'flex';
+    ['profil','article','realisation'].forEach(t => document.getElementById('card-' + t).classList.remove('selected'));
+    document.getElementById('card-profil').classList.add('selected');
     activeForm = 'profil';
   }
 }
 
-// Écoute la soumission du formulaire Tally via postMessage
-// Tally envoie parfois un objet, parfois une string JSON
+/* Écoute la soumission Tally via postMessage */
 window.addEventListener('message', function(e) {
   let data = e.data;
-  if (typeof data === 'string') {
-    try { data = JSON.parse(data); } catch(err) { return; }
-  }
+  if (typeof data === 'string') { try { data = JSON.parse(data); } catch(err) { return; } }
   if (!data || data.type !== 'tally-form-submitted') return;
-
   const banner = document.getElementById('reminder-banner');
   const nextType = banner.dataset.next;
-
-  // Déclenche la redirection seulement si on est dans le flux "pas de profil"
-  if (nextType && activeForm === 'profil') {
-    goToNext();
-  }
+  if (nextType && activeForm === 'profil') goToNext();
 });
 
 function goToNext() {
   const type = document.getElementById('reminder-banner').dataset.next;
   if (!type) return;
-
-  // Vide le next pour éviter un double déclenchement
   document.getElementById('reminder-banner').dataset.next = '';
   document.getElementById('reminder-banner').style.display = 'none';
   document.getElementById('tally-profil').style.display = 'none';
 
-  const labels = {
-    article:     '02 — Soumettre un article',
-    realisation: '03 — Soumettre une réalisation'
-  };
+  const labels = { article: '02 — Soumettre un article', realisation: '03 — Soumettre une réalisation' };
   document.getElementById('form-label').textContent = '✓ Profil enregistré — ' + labels[type];
   document.getElementById('tally-' + type).style.display = 'block';
 
-  ['profil','article','realisation'].forEach(t => {
-    document.getElementById('card-' + t).style.borderColor = '#bae6fd';
-  });
-  document.getElementById('card-' + type).style.borderColor = '#0ea5e9';
+  ['profil','article','realisation'].forEach(t => document.getElementById('card-' + t).classList.remove('selected'));
+  document.getElementById('card-' + type).classList.add('selected');
   activeForm = type;
 
   document.getElementById('form-zone').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -517,19 +322,6 @@ function goToNext() {
 
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
-    // Ensure there is a toggle, if there isn't float one in the top right
-    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-      const a = window.document.createElement('a');
-      a.classList.add('top-right');
-      a.classList.add('quarto-color-scheme-toggle');
-      a.href = "";
-      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-      const i = window.document.createElement("i");
-      i.classList.add('bi');
-      a.appendChild(i);
-      window.document.body.appendChild(a);
-    }
-    setColorSchemeToggle(hasAlternateSentinel())
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

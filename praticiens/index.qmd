@@ -3,58 +3,38 @@ title: ""
 page-layout: full
 ---
 ```{=html}
-<div style="padding:3rem 6vw; max-width:1200px; margin:0 auto;">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
+<div style="padding:4rem 6vw;max-width:1200px;margin:0 auto;">
+
+  <!-- En-tête -->
   <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// praticiens</p>
-    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Les gens qui construisent</h1>
-    <p style="color:#94a3b8; font-size:0.9rem; margin:0 0 2rem 0;">Profils de praticiens tech — Data, DevOps, Cloud, IA, Cybersécurité, MLOps, Dev.</p>
+    <span class="f-label" style="margin-bottom:.5rem;">// praticiens</span>
+    <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;color:#0f172a;margin:.4rem 0 .6rem 0;">Les gens qui construisent</h1>
+    <p style="color:#94a3b8;font-size:.88rem;margin:0 0 2rem 0;">Profils de praticiens tech — Data, DevOps, Cloud, IA, Cybersécurité, MLOps, Dev.</p>
 
     <!-- Recherche -->
-    <input id="search-input" type="text" placeholder="Rechercher par nom, rôle, ville, stack..."
+    <input id="search-input" type="text" placeholder="Rechercher par nom, rôle, ville, stack…"
       oninput="renderPraticiens(getFiltered())"
-      style="font-family:'Space Mono',monospace; font-size:0.78rem; background:#f0f9ff; border:1px solid #bae6fd; color:#0f172a; padding:0.55rem 1rem; border-radius:2px; width:100%; max-width:480px; outline:none; margin-bottom:1.25rem;"
-      onfocus="this.style.borderColor='#0ea5e9'" onblur="this.style.borderColor='#bae6fd'"/>
+      class="f-input"
+      style="margin-bottom:1.25rem;max-width:480px;"
+    />
 
     <!-- Filtres -->
-    <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
-      <button onclick="filterPraticiens('all', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:4px 12px; border-radius:2px; cursor:pointer;">
-        Tous
-      </button>
-      <button onclick="filterPraticiens('open', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
-        ● Disponibles
-      </button>
-      <button onclick="filterPraticiens('data', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
-        Data
-      </button>
-      <button onclick="filterPraticiens('devops', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
-        DevOps
-      </button>
-      <button onclick="filterPraticiens('cloud', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
-        Cloud
-      </button>
-      <button onclick="filterPraticiens('ia', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
-        IA
-      </button>
-      <button onclick="filterPraticiens('cybersecurite', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
-        Cybersécurité
-      </button>
-      <button onclick="filterPraticiens('mlops', this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;">
-        MLOps
-      </button>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+      <button class="filter-pill active" onclick="filterPraticiens('all', this)">Tous</button>
+      <button class="filter-pill" onclick="filterPraticiens('open', this)">● Disponibles</button>
+      <button class="filter-pill" onclick="filterPraticiens('data', this)">Data</button>
+      <button class="filter-pill" onclick="filterPraticiens('devops', this)">DevOps</button>
+      <button class="filter-pill" onclick="filterPraticiens('cloud', this)">Cloud</button>
+      <button class="filter-pill" onclick="filterPraticiens('ia', this)">IA</button>
+      <button class="filter-pill" onclick="filterPraticiens('cybersecurite', this)">Cybersécurité</button>
+      <button class="filter-pill" onclick="filterPraticiens('mlops', this)">MLOps</button>
     </div>
   </div>
 
-  <div id="praticiens-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.25rem;"></div>
-  <p id="no-results" style="display:none; color:#94a3b8; font-family:'Space Mono',monospace; font-size:0.85rem; margin-top:2rem;">Aucun praticien dans cette catégorie.</p>
+  <div id="praticiens-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.25rem;"></div>
+  <p id="no-results" style="display:none;color:#94a3b8;font-family:'Space Mono',monospace;font-size:.85rem;margin-top:2rem;">Aucun praticien dans cette catégorie.</p>
 
 </div>
 
@@ -81,47 +61,57 @@ function renderPraticiens(list) {
   const noRes = document.getElementById('no-results');
   if (!list.length) { grid.innerHTML = ''; noRes.style.display = 'block'; return; }
   noRes.style.display = 'none';
-  grid.innerHTML = list.map(p => `
-    <a href="${p.slug}.html" style="text-decoration:none;">
-      <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:6px; padding:1.5rem; display:flex; flex-direction:column; gap:0.75rem; transition:border-color 0.2s;"
-           onmouseover="this.style.borderColor='#0ea5e9'" onmouseout="this.style.borderColor='#bae6fd'">
 
-        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
-          <div>
-            <p style="font-family:'Syne',sans-serif; font-size:1rem; font-weight:700; color:#0f172a; margin:0;">${p.name}</p>
-            <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#0ea5e9; margin:0.2rem 0 0 0;">${p.role}</p>
+  const badgeColors = {
+    'MENTOR':       { bg:'rgba(249,115,22,.08)', border:'rgba(249,115,22,.25)', color:'#f97316' },
+    'SPEAKER':      { bg:'rgba(167,139,250,.08)', border:'rgba(167,139,250,.25)', color:'#a78bfa' },
+    'OPEN SOURCE':  { bg:'rgba(52,211,153,.08)', border:'rgba(52,211,153,.25)', color:'#34d399' },
+    'CERTIFIÉ':     { bg:'rgba(96,165,250,.08)', border:'rgba(96,165,250,.25)', color:'#60a5fa' }
+  };
+
+  grid.innerHTML = list.map(p => {
+    const initials = p.name.split(' ').map(w => w[0]).join('').slice(0,2).toUpperCase();
+    return `
+    <a href="${p.slug}.html" class="f-card-link">
+      <div class="f-card f-card-hover" style="display:flex;flex-direction:column;gap:.85rem;">
+
+        <!-- Header -->
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;">
+          <div style="display:flex;align-items:center;gap:.85rem;">
+            <div class="profile-avatar" style="width:48px;height:48px;font-size:1rem;border-radius:10px;">${initials}</div>
+            <div>
+              <p style="font-family:'Syne',sans-serif;font-size:.98rem;font-weight:700;color:#0f172a;margin:0;">${p.name}</p>
+              <p style="font-family:'Space Mono',monospace;font-size:.68rem;color:#0ea5e9;margin:.15rem 0 0 0;">${p.role}</p>
+            </div>
           </div>
-          <span style="font-size:1.2rem;">${p.country}</span>
+          <span style="font-size:1.1rem;flex-shrink:0;">${p.country}</span>
         </div>
 
         ${p.badges && p.badges.length ? `
-        <div style="display:flex; flex-wrap:wrap; gap:0.35rem; margin-top:0.1rem;">
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;">
           ${p.badges.map(b => {
-            const badgeColors = { 'MENTOR':'#f97316', 'SPEAKER':'#a78bfa', 'OPEN SOURCE':'#34d399', 'CERTIFIÉ':'#60a5fa' };
-            const col = badgeColors[b] || '#94a3b8';
-            return `<span style="font-family:'Space Mono',monospace; font-size:0.6rem; letter-spacing:0.08em; color:${col}; border:1px solid ${col}33; background:${col}0d; padding:1px 7px; border-radius:2px;">${b}</span>`;
+            const c = badgeColors[b] || { bg:'rgba(148,163,184,.08)', border:'rgba(148,163,184,.25)', color:'#94a3b8' };
+            return `<span style="font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.08em;color:${c.color};border:1px solid ${c.border};background:${c.bg};padding:2px 8px;border-radius:4px;">${b}</span>`;
           }).join('')}
         </div>` : ''}
 
-        <p style="font-size:0.83rem; color:#475569; line-height:1.6; margin:0;">${p.bio}</p>
+        <p style="font-size:.83rem;color:#475569;line-height:1.7;margin:0;">${p.bio}</p>
 
-        <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
-          ${p.stack.map(s => `
-            <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.06em; color:#94a3b8; border:1px solid #bae6fd; padding:2px 7px; border-radius:2px;">${s}</span>
-          `).join('')}
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;">
+          ${p.stack.map(s => `<span class="f-tag">${s}</span>`).join('')}
         </div>
 
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.25rem;">
-          <span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#94a3b8;">${p.city}</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#94a3b8;">${p.city}</span>
           ${p.open_to_work
-            ? `<span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#00e676;">● disponible</span>`
-            : `<span style="font-family:'Space Mono',monospace; font-size:0.65rem; color:#94a3b8;">○ non dispo</span>`
+            ? `<span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#10b981;display:flex;align-items:center;gap:.3rem;"><span style="width:6px;height:6px;background:#10b981;border-radius:50%;display:inline-block;"></span>disponible</span>`
+            : `<span style="font-family:'Space Mono',monospace;font-size:.65rem;color:#cbd5e1;">○ non dispo</span>`
           }
         </div>
 
       </div>
-    </a>
-  `).join('');
+    </a>`;
+  }).join('');
 }
 
 let activeFilter = 'all';
@@ -142,12 +132,8 @@ function getFiltered() {
 
 function filterPraticiens(filter, btn) {
   activeFilter = filter;
-  document.querySelectorAll('button').forEach(b => {
-    b.style.borderColor = '#bae6fd';
-    b.style.color = '#94a3b8';
-  });
-  btn.style.borderColor = '#0ea5e9';
-  btn.style.color = '#0ea5e9';
+  document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
   renderPraticiens(getFiltered());
 }
 
