@@ -46,7 +46,6 @@ website:
     foreground: "#64748b"
     border: false
     left: "© 2026 from0tohero.dev"
-    right: "Construit par DIAKITE MAMADOU YOUSSOUF & pour les praticiens 🌍"
 
   search:
     location: navbar
