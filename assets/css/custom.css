@@ -394,6 +394,11 @@ body { -webkit-font-smoothing: antialiased; background: var(--f-bg); color: var(
   display: block;
 }
 
+/* ── LOGO DARK SWAP ── */
+.quarto-dark .navbar-brand img {
+  content: url('../img/logo-dark.svg');
+}
+
 /* ── COMMUNITY STRIP (landing closing) ── */
 .community-strip {
   background: var(--f-surface);
@@ -401,6 +406,6 @@ body { -webkit-font-smoothing: antialiased; background: var(--f-bg); color: var(
   border: 1.5px solid var(--f-border);
   padding: 3.5rem;
 }
-[data-bs-theme="dark"] .community-strip {
+.quarto-dark .community-strip {
   background: var(--f-card);
 }
