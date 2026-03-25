@@ -42,8 +42,8 @@ website:
         href: "https://github.com/diakite-data"
 
   page-footer:
-    background: "dark"
-    foreground: "secondary"
+    background: "#0f172a"
+    foreground: "#64748b"
     border: false
     left: "© 2026 from0tohero.dev"
     right: "Construit par DIAKITE MAMADOU YOUSSOUF & pour les praticiens 🌍"

@@ -1,119 +1,80 @@
 ---
 title: ""
 page-layout: full
-listing:
-  contents: "*.qmd"
-  type: default
-  sort: "date desc"
-  fields: [title, author, date, categories]
 ---
 ```{=html}
-<div style="padding:3rem 6vw; max-width:1200px; margin:0 auto;">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<div style="padding:4rem 6vw;max-width:1200px;margin:0 auto;">
 
   <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#f0a500; text-transform:uppercase; margin-bottom:0.5rem;">// articles</p>
-    <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#e8e4d9; margin:0 0 0.5rem 0;">Ce que les praticiens écrivent</h1>
-    <p style="color:#6b7280; font-size:0.9rem; margin:0 0 2rem 0;">Articles publiés sur Medium, LinkedIn, Dev.to — agrégés ici.</p>
+    <span class="f-label" style="margin-bottom:.5rem;">// articles</span>
+    <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;color:var(--f-text-1);margin:.4rem 0 .6rem 0;">Ce que les praticiens écrivent</h1>
+    <p style="color:var(--f-text-3);font-size:.88rem;margin:0 0 2rem 0;">Articles publiés sur Medium, LinkedIn, Dev.to — agrégés ici.</p>
 
-    <!-- Filtres -->
-    <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
-      <button onclick="filterArticles('all')"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #f0a500; color:#f0a500; padding:4px 12px; border-radius:2px; cursor:pointer;" class="f-btn active">
-        Tous
-      </button>
-      <button onclick="filterArticles('data')"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="f-btn">
-        Data
-      </button>
-      <button onclick="filterArticles('devops')"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="f-btn">
-        DevOps
-      </button>
-      <button onclick="filterArticles('cloud')"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="f-btn">
-        Cloud
-      </button>
-      <button onclick="filterArticles('ia')"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="f-btn">
-        IA
-      </button>
-      <button onclick="filterArticles('cyber')"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="f-btn">
-        Cyber
-      </button>
-      <button onclick="filterArticles('dev')"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #1e2128; color:#6b7280; padding:4px 12px; border-radius:2px; cursor:pointer;" class="f-btn">
-        Dev
-      </button>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+      <button class="filter-pill active" onclick="filterArticles('all', this)">Tous</button>
+      <button class="filter-pill" onclick="filterArticles('data', this)">Data</button>
+      <button class="filter-pill" onclick="filterArticles('devops', this)">DevOps</button>
+      <button class="filter-pill" onclick="filterArticles('cloud', this)">Cloud</button>
+      <button class="filter-pill" onclick="filterArticles('ia', this)">IA</button>
+      <button class="filter-pill" onclick="filterArticles('cyber', this)">Cyber</button>
+      <button class="filter-pill" onclick="filterArticles('dev', this)">Dev</button>
     </div>
   </div>
 
-  <!-- Grille articles -->
-  <div id="articles-grid" style="display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1.25rem;">
-  </div>
+  <div id="articles-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;"></div>
 
-  <p id="no-results" style="display:none; color:#6b7280; font-family:'Space Mono',monospace; font-size:0.85rem; margin-top:2rem;">
+  <p id="no-results" style="color:var(--f-text-3);font-family:'Space Mono',monospace;font-size:.85rem;margin-top:2rem;display:none;">
     Aucun article dans cette catégorie pour le moment.
   </p>
 
 </div>
 
 <script>
-const articles = [
-  // Alimenté automatiquement — exemple de structure :
-  // { title, author, country, date, category, source, url, excerpt }
-];
+const articles = [];
 
-function getCategoryColor(cat) {
-  const colors = {
-    data:   { color:'#60a5fa', bg:'#60a5fa0d', border:'#60a5fa22' },
-    devops: { color:'#34d399', bg:'#34d3990d', border:'#34d39922' },
-    cloud:  { color:'#a78bfa', bg:'#a78bfa0d', border:'#a78bfa22' },
-    ia:     { color:'#f0a500', bg:'#f0a5000d', border:'#f0a50022' },
-    cyber:  { color:'#ff4560', bg:'#ff45600d', border:'#ff456022' },
-    dev:    { color:'#f472b6', bg:'#f472b60d', border:'#f472b622' },
-  };
-  return colors[cat] || colors.data;
-}
+const catColors = {
+  data:   { color:'#60a5fa', border:'rgba(96,165,250,.25)',  bg:'rgba(96,165,250,.08)' },
+  devops: { color:'#34d399', border:'rgba(52,211,153,.25)',  bg:'rgba(52,211,153,.08)' },
+  cloud:  { color:'#a78bfa', border:'rgba(167,139,250,.25)', bg:'rgba(167,139,250,.08)' },
+  ia:     { color:'var(--f-orange)', border:'rgba(249,115,22,.25)', bg:'rgba(249,115,22,.08)' },
+  cyber:  { color:'#fb7185', border:'rgba(251,113,133,.25)', bg:'rgba(251,113,133,.08)' },
+  dev:    { color:'#f472b6', border:'rgba(244,114,182,.25)', bg:'rgba(244,114,182,.08)' },
+};
 
 function renderArticles(list) {
   const grid = document.getElementById('articles-grid');
   const noRes = document.getElementById('no-results');
+
   if (!list.length) {
     grid.innerHTML = '';
     noRes.style.display = 'block';
     return;
   }
   noRes.style.display = 'none';
+
   grid.innerHTML = list.map(a => {
-    const c = getCategoryColor(a.category);
+    const c = catColors[a.category] || catColors.data;
     return `
-    <a href="${a.url}" target="_blank" style="text-decoration:none;">
-      <div style="background:#12141a; border:1px solid #1e2128; border-radius:6px; padding:1.5rem; height:100%; display:flex; flex-direction:column; transition:border-color 0.2s;"
-           onmouseover="this.style.borderColor='#f0a500'" onmouseout="this.style.borderColor='#1e2128'">
-        <span style="font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:${c.color}; border:1px solid ${c.border}; background:${c.bg}; padding:2px 8px; border-radius:2px; width:fit-content; margin-bottom:0.75rem;">
+    <a href="${a.url}" target="_blank" class="f-card-link">
+      <div class="f-card f-card-hover" style="display:flex;flex-direction:column;gap:.75rem;height:100%;">
+        <span style="font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:${c.color};border:1px solid ${c.border};background:${c.bg};padding:2px 9px;border-radius:4px;width:fit-content;">
           ${a.category.toUpperCase()}
         </span>
-        <h3 style="font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:700; color:#e8e4d9; margin:0 0 0.4rem 0; flex:1;">${a.title}</h3>
-        <p style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#6b7280; margin-bottom:0.75rem;">
-          ${a.author} ${a.country} · ${a.source} · ${a.date}
-        </p>
-        <p style="font-size:0.85rem; color:#9ca3af; line-height:1.6; margin-bottom:1rem;">${a.excerpt}</p>
-        <span style="font-family:'Space Mono',monospace; font-size:0.72rem; color:#f0a500; letter-spacing:0.06em;">Lire →</span>
+        <h3 style="font-family:'Syne',sans-serif;font-size:.98rem;font-weight:700;color:var(--f-text-1);margin:0;flex:1;">${a.title}</h3>
+        <p style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--f-text-3);margin:0;">${a.author} ${a.country} · ${a.source} · ${a.date}</p>
+        <p style="font-size:.83rem;color:var(--f-text-2);line-height:1.65;margin:0;">${a.excerpt}</p>
+        <span style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--f-sky);">Lire →</span>
       </div>
     </a>`;
   }).join('');
 }
 
-function filterArticles(cat) {
-  document.querySelectorAll('.f-btn').forEach(b => {
-    b.style.borderColor = '#1e2128';
-    b.style.color = '#6b7280';
-  });
-  event.target.style.borderColor = '#f0a500';
-  event.target.style.color = '#f0a500';
-  const filtered = cat === 'all' ? articles : articles.filter(a => a.category === cat);
-  renderArticles(filtered);
+function filterArticles(cat, btn) {
+  document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderArticles(cat === 'all' ? articles : articles.filter(a => a.category === cat));
 }
 
 renderArticles(articles);
