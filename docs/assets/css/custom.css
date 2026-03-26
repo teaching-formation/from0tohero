@@ -130,18 +130,18 @@ body { -webkit-font-smoothing: antialiased; background: var(--f-bg); color: var(
   transition: all .2s cubic-bezier(.4,0,.2,1);
 }
 .f-card-hover:hover {
-  border-color: var(--f-sky);
-  box-shadow: var(--f-shadow-sky);
+  border-color: var(--f-orange);
+  box-shadow: var(--f-shadow-org);
   transform: translateY(-3px);
 }
 .f-card.selected {
-  border-color: var(--f-sky);
-  box-shadow: 0 0 0 3px var(--f-sky-bg);
+  border-color: var(--f-orange);
+  box-shadow: 0 0 0 3px rgba(249,115,22,.1);
 }
 .f-card-link { text-decoration: none; display: block; }
 .f-card-link:hover .f-card {
-  border-color: var(--f-sky);
-  box-shadow: var(--f-shadow-sky);
+  border-color: var(--f-orange);
+  box-shadow: var(--f-shadow-org);
   transform: translateY(-3px);
 }
 
@@ -244,9 +244,9 @@ body { -webkit-font-smoothing: antialiased; background: var(--f-bg); color: var(
   white-space: nowrap;
 }
 .filter-pill:hover, .filter-pill.active {
-  border-color: var(--f-sky);
-  color: var(--f-sky);
-  background: var(--f-sky-bg);
+  border-color: var(--f-orange);
+  color: var(--f-orange);
+  background: rgba(249,115,22,.07);
 }
 
 /* ── SUBMIT CARDS ── */
@@ -261,14 +261,14 @@ body { -webkit-font-smoothing: antialiased; background: var(--f-bg); color: var(
   text-align: left;
 }
 .submit-card:hover {
-  border-color: var(--f-sky);
-  box-shadow: var(--f-shadow-sky);
+  border-color: var(--f-orange);
+  box-shadow: var(--f-shadow-org);
   transform: translateY(-3px);
 }
 .submit-card.selected {
-  border-color: var(--f-sky);
-  background: var(--f-sky-bg);
-  box-shadow: 0 0 0 3px var(--f-sky-bg), var(--f-shadow-sky);
+  border-color: var(--f-orange);
+  background: rgba(249,115,22,.04);
+  box-shadow: 0 0 0 3px rgba(249,115,22,.1), var(--f-shadow-org);
 }
 .submit-icon {
   width: 44px; height: 44px;

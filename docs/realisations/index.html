@@ -317,70 +317,34 @@ ul.task-list li input[type="checkbox"] {
 <div style="padding:3rem 6vw; max-width:1200px; margin:0 auto;">
 
   <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// réalisations</p>
+    <span class="f-label" style="margin-bottom:0.5rem;">// réalisations</span>
     <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Ce que les praticiens construisent</h1>
     <p style="color:#94a3b8; font-size:0.9rem; margin:0 0 2rem 0;">Pipelines, dashboards, APIs, bootcamps, chaînes YT — du concret.</p>
 
     <!-- Filtres type -->
-    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
-      <button onclick="filter('type','all',this)" style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Tous
-      </button>
-      <button onclick="filter('type','pipeline',this)" style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Pipeline
-      </button>
-      <button onclick="filter('type','dashboard',this)" style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Dashboard
-      </button>
-      <button onclick="filter('type','api',this)" style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
-        API
-      </button>
-      <button onclick="filter('type','bootcamp',this)" style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Bootcamp
-      </button>
-      <button onclick="filter('type','youtube',this)" style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
-        YouTube
-      </button>
-      <button onclick="filter('type','app',this)" style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
-        App
-      </button>
-      <button onclick="filter('type','cours',this)" style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Cours
-      </button>
-      <button onclick="filter('type','autre',this)" style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Autre
-      </button>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem;">
+      <button class="filter-pill active btn-type" onclick="filter('type','all',this)">Tous</button>
+      <button class="filter-pill btn-type" onclick="filter('type','pipeline',this)">Pipeline</button>
+      <button class="filter-pill btn-type" onclick="filter('type','dashboard',this)">Dashboard</button>
+      <button class="filter-pill btn-type" onclick="filter('type','api',this)">API</button>
+      <button class="filter-pill btn-type" onclick="filter('type','bootcamp',this)">Bootcamp</button>
+      <button class="filter-pill btn-type" onclick="filter('type','youtube',this)">YouTube</button>
+      <button class="filter-pill btn-type" onclick="filter('type','app',this)">App</button>
+      <button class="filter-pill btn-type" onclick="filter('type','cours',this)">Cours</button>
+      <button class="filter-pill btn-type" onclick="filter('type','autre',this)">Autre</button>
     </div>
 
     <!-- Filtres catégorie -->
-    <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
-      <button onclick="filter('cat','all',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        Toutes catégories
-      </button>
-      <button onclick="filter('cat','data',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        Data
-      </button>
-      <button onclick="filter('cat','devops',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        DevOps
-      </button>
-      <button onclick="filter('cat','cloud',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        Cloud
-      </button>
-      <button onclick="filter('cat','ia',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        IA
-      </button>
-      <button onclick="filter('cat','cyber',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        Cybersécurité
-      </button>
-      <button onclick="filter('cat','mlops',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        MLOps
-      </button>
-      <button onclick="filter('cat','dev',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        Dev
-      </button>
-      <button onclick="filter('cat','autre',this)" style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-cat">
-        Autre
-      </button>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+      <button class="filter-pill active btn-cat" onclick="filter('cat','all',this)">Toutes catégories</button>
+      <button class="filter-pill btn-cat" onclick="filter('cat','data',this)">Data</button>
+      <button class="filter-pill btn-cat" onclick="filter('cat','devops',this)">DevOps</button>
+      <button class="filter-pill btn-cat" onclick="filter('cat','cloud',this)">Cloud</button>
+      <button class="filter-pill btn-cat" onclick="filter('cat','ia',this)">IA</button>
+      <button class="filter-pill btn-cat" onclick="filter('cat','cyber',this)">Cybersécurité</button>
+      <button class="filter-pill btn-cat" onclick="filter('cat','mlops',this)">MLOps</button>
+      <button class="filter-pill btn-cat" onclick="filter('cat','dev',this)">Dev</button>
+      <button class="filter-pill btn-cat" onclick="filter('cat','autre',this)">Autre</button>
     </div>
   </div>
 
@@ -483,13 +447,12 @@ function renderRealisations(list) {
 function filter(dim, val, btn) {
   if (dim === 'type') {
     activeType = val;
-    document.querySelectorAll('.btn-type').forEach(b => { b.style.borderColor='#bae6fd'; b.style.color='#94a3b8'; });
+    document.querySelectorAll('.btn-type').forEach(b => b.classList.remove('active'));
   } else {
     activeCat = val;
-    document.querySelectorAll('.btn-cat').forEach(b => { b.style.borderColor='#bae6fd'; b.style.color='#94a3b8'; });
+    document.querySelectorAll('.btn-cat').forEach(b => b.classList.remove('active'));
   }
-  btn.style.borderColor = '#0ea5e9';
-  btn.style.color = '#0ea5e9';
+  btn.classList.add('active');
 
   let filtered = realisations;
   if (activeType !== 'all') filtered = filtered.filter(r => r.type === activeType);

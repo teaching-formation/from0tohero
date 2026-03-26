@@ -6,52 +6,25 @@ page-layout: full
 <div style="padding:3rem 6vw; max-width:1200px; margin:0 auto;">
 
   <div style="margin-bottom:2.5rem;">
-    <p style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.15em; color:#0ea5e9; text-transform:uppercase; margin-bottom:0.5rem;">// événements</p>
+    <span class="f-label" style="margin-bottom:0.5rem;">// événements</span>
     <h1 style="font-family:'Syne',sans-serif; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; color:#0f172a; margin:0 0 0.5rem 0;">Conférences, meetups & hackathons</h1>
     <p style="color:#94a3b8; font-size:0.9rem; margin:0 0 2rem 0;">Événements tech à ne pas manquer — en ligne et en présentiel.</p>
 
     <!-- Filtres statut -->
-    <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
-      <button onclick="filter('statut','all',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-statut">
-        Tous
-      </button>
-      <button onclick="filter('statut','upcoming',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-statut">
-        À venir
-      </button>
-      <button onclick="filter('statut','past',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.7rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:4px 12px; border-radius:2px; cursor:pointer;" class="btn-statut">
-        Passés
-      </button>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem;">
+      <button class="filter-pill active btn-statut" onclick="filter('statut','all',this)">Tous</button>
+      <button class="filter-pill btn-statut" onclick="filter('statut','upcoming',this)">À venir</button>
+      <button class="filter-pill btn-statut" onclick="filter('statut','past',this)">Passés</button>
     </div>
 
     <!-- Filtres type -->
-    <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
-      <button onclick="filter('type','all',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #0ea5e9; color:#0ea5e9; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Tous types
-      </button>
-      <button onclick="filter('type','conference',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Conférence
-      </button>
-      <button onclick="filter('type','meetup',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Meetup
-      </button>
-      <button onclick="filter('type','hackathon',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Hackathon
-      </button>
-      <button onclick="filter('type','webinaire',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Webinaire
-      </button>
-      <button onclick="filter('type','bootcamp',this)"
-        style="font-family:'Space Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; background:transparent; border:1px solid #bae6fd; color:#94a3b8; padding:3px 10px; border-radius:2px; cursor:pointer;" class="btn-type">
-        Bootcamp
-      </button>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+      <button class="filter-pill active btn-type" onclick="filter('type','all',this)">Tous types</button>
+      <button class="filter-pill btn-type" onclick="filter('type','conference',this)">Conférence</button>
+      <button class="filter-pill btn-type" onclick="filter('type','meetup',this)">Meetup</button>
+      <button class="filter-pill btn-type" onclick="filter('type','hackathon',this)">Hackathon</button>
+      <button class="filter-pill btn-type" onclick="filter('type','webinaire',this)">Webinaire</button>
+      <button class="filter-pill btn-type" onclick="filter('type','bootcamp',this)">Bootcamp</button>
     </div>
   </div>
 
@@ -159,13 +132,12 @@ function renderEvenements(list) {
 function filter(dim, val, btn) {
   if (dim === 'statut') {
     activeStatut = val;
-    document.querySelectorAll('.btn-statut').forEach(b => { b.style.borderColor='#bae6fd'; b.style.color='#94a3b8'; });
+    document.querySelectorAll('.btn-statut').forEach(b => b.classList.remove('active'));
   } else {
     activeType = val;
-    document.querySelectorAll('.btn-type').forEach(b => { b.style.borderColor='#bae6fd'; b.style.color='#94a3b8'; });
+    document.querySelectorAll('.btn-type').forEach(b => b.classList.remove('active'));
   }
-  btn.style.borderColor = '#0ea5e9';
-  btn.style.color = '#0ea5e9';
+  btn.classList.add('active');
 
   let filtered = evenements;
   if (activeStatut === 'upcoming') filtered = filtered.filter(e => isUpcoming(e));
