@@ -71,7 +71,7 @@ function renderPraticiens(list) {
 
         <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;">
           <div style="display:flex;align-items:center;gap:.85rem;">
-            <div class="profile-avatar" style="width:48px;height:48px;font-size:1rem;border-radius:10px;">${initials}</div>
+            <div class="profile-avatar" style="width:52px;height:52px;font-size:.78rem;letter-spacing:.05em;border-radius:10px;">${initials}</div>
             <div>
               <p style="font-family:'Syne',sans-serif;font-size:.98rem;font-weight:700;color:var(--f-text-1);margin:0;">${p.name}</p>
               <p style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--f-sky);margin:.15rem 0 0 0;">${p.role}</p>
