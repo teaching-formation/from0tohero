@@ -65,7 +65,7 @@ page-layout: full
     </p>
     <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0;">
       Pour toute demande de suppression ou de modification de vos données, contactez :
-      <a href="mailto:contact@from0tohero.dev" style="color:var(--f-sky);text-decoration:none;">contact@from0tohero.dev</a>
+      <a href="mailto:beeruschatgpt@gmail.com" style="color:var(--f-sky);text-decoration:none;">beeruschatgpt@gmail.com</a>
     </p>
   </section>
 
@@ -81,7 +81,7 @@ page-layout: full
   <hr class="f-hr" style="margin-bottom:2rem;">
 
   <p style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--f-text-3);line-height:1.8;">
-    Contact : <a href="mailto:contact@from0tohero.dev" style="color:var(--f-sky);text-decoration:none;">contact@from0tohero.dev</a>
+    Contact : <a href="mailto:beeruschatgpt@gmail.com" style="color:var(--f-sky);text-decoration:none;">beeruschatgpt@gmail.com</a>
   </p>
 
 </div>
