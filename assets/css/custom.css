@@ -162,7 +162,7 @@ body { -webkit-font-smoothing: antialiased; background: var(--f-bg); color: var(
   font-size: .68rem;
   letter-spacing: .15em;
   text-transform: uppercase;
-  color: var(--f-sky);
+  color: var(--f-orange);
   display: block;
 }
 
