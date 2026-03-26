@@ -45,7 +45,8 @@ website:
     background: "#0f172a"
     foreground: "#64748b"
     border: false
-    left: "© 2026 from0tohero.dev"
+    left: "© 2026 from0tohero.dev — Tous droits réservés."
+    right: "<a href='/legal/index.html' style='color:#64748b;text-decoration:none;font-size:.72rem;font-family:monospace;'>Mentions légales & CGU</a>"
 
   search:
     location: navbar

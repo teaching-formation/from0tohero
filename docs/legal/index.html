@@ -79,11 +79,11 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../assets/css/custom.css">
 <meta property="og:title" content="from0tohero.dev">
 <meta property="og:description" content="La plateforme des praticiens">
-<meta property="og:image" content="https://from0tohero.dev/articles/assets/img/og-banner.png">
+<meta property="og:image" content="https://from0tohero.dev/legal/assets/img/og-banner.png">
 <meta property="og:site_name" content="from0tohero.dev">
 <meta name="twitter:title" content="from0tohero.dev">
 <meta name="twitter:description" content="La plateforme des praticiens">
-<meta name="twitter:image" content="https://from0tohero.dev/articles/assets/img/og-banner.png">
+<meta name="twitter:image" content="https://from0tohero.dev/legal/assets/img/og-banner.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -268,7 +268,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../articles/index.html" aria-current="page"> 
+    <a class="nav-link" href="../articles/index.html"> 
 <span class="menu-text">Articles</span></a>
   </li>  
   <li class="nav-item">
@@ -316,80 +316,96 @@ ul.task-list li input[type="checkbox"] {
 
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
 
-<div style="padding:4rem 6vw;max-width:1200px;margin:0 auto;">
+<div style="padding:4rem 6vw;max-width:800px;margin:0 auto;">
 
-  <div style="margin-bottom:2.5rem;">
-    <span class="f-label" style="margin-bottom:.5rem;">// articles</span>
-    <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;color:var(--f-text-1);margin:.4rem 0 .6rem 0;">Ce que les praticiens écrivent</h1>
-    <p style="color:var(--f-text-3);font-size:.88rem;margin:0 0 2rem 0;">Articles publiés sur Medium, LinkedIn, Dev.to — agrégés ici.</p>
+  <a href="../index.html" class="link-back" style="margin-bottom:2.5rem;display:inline-flex;">← Accueil</a>
 
-    <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
-      <button class="filter-pill active" onclick="filterArticles('all', this)">Tous</button>
-      <button class="filter-pill" onclick="filterArticles('data', this)">Data</button>
-      <button class="filter-pill" onclick="filterArticles('devops', this)">DevOps</button>
-      <button class="filter-pill" onclick="filterArticles('cloud', this)">Cloud</button>
-      <button class="filter-pill" onclick="filterArticles('ia', this)">IA</button>
-      <button class="filter-pill" onclick="filterArticles('cyber', this)">Cyber</button>
-      <button class="filter-pill" onclick="filterArticles('dev', this)">Dev</button>
-    </div>
-  </div>
+  <span class="f-label" style="margin-bottom:.5rem;margin-top:1.5rem;">// légal</span>
+  <h1 style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;color:var(--f-text-1);margin:.4rem 0 .5rem 0;">Mentions légales &amp; CGU</h1>
+  <p style="font-family:'Space Mono',monospace;font-size:.72rem;color:var(--f-text-3);margin:0 0 3rem 0;">Dernière mise à jour : mars 2026</p>
 
-  <div id="articles-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;"></div>
+  <hr class="f-hr" style="margin-bottom:2.5rem;">
 
-  <p id="no-results" style="color:var(--f-text-3);font-family:'Space Mono',monospace;font-size:.85rem;margin-top:2rem;display:none;">
-    Aucun article dans cette catégorie pour le moment.
+  <!-- COPYRIGHT -->
+  <section style="margin-bottom:3rem;">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--f-text-1);margin:0 0 1rem 0;">1. Propriété intellectuelle</h2>
+    <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0 0 1rem 0;">
+      © 2026 <strong>from0tohero.dev</strong> — Tous droits réservés.<br>
+      Propriétaire et éditeur : <strong>Diakité Mamadou Youssouf</strong>, Abidjan, Côte d'Ivoire.
+    </p>
+    <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0;">
+      Le contenu de ce site (textes, design, code, structure, marque) est protégé par le droit d'auteur.
+      Toute reproduction, distribution ou utilisation commerciale sans autorisation écrite préalable est interdite.
+      Les praticiens conservent l'intégralité des droits sur le contenu qu'ils soumettent (bio, projets, articles).
+    </p>
+  </section>
+
+  <!-- OBJET -->
+  <section style="margin-bottom:3rem;">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--f-text-1);margin:0 0 1rem 0;">2. Objet de la plateforme</h2>
+    <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0;">
+      from0tohero.dev est une plateforme de mise en valeur des praticiens tech francophones.
+      Elle agrège des profils, réalisations et articles publiés volontairement par leurs auteurs.
+      Le site n'est pas une plateforme de recrutement, de mise en relation rémunérée, ni une place de marché.
+    </p>
+  </section>
+
+  <!-- SOUMISSIONS -->
+  <section style="margin-bottom:3rem;">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--f-text-1);margin:0 0 1rem 0;">3. Conditions de soumission</h2>
+    <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0 0 1rem 0;">
+      En soumettant un profil, une réalisation ou un article sur from0tohero.dev, vous déclarez :
+    </p>
+    <ul style="font-size:.9rem;color:var(--f-text-2);line-height:2;padding-left:1.25rem;margin:0 0 1rem 0;">
+      <li>Être l'auteur ou avoir les droits sur le contenu soumis.</li>
+      <li>Accepter que ce contenu soit publié publiquement sur le site.</li>
+      <li>Accepter que le contenu puisse être retiré à tout moment par l'éditeur, sans préavis.</li>
+      <li>Ne pas soumettre de contenu faux, trompeur, diffamatoire ou illégal.</li>
+    </ul>
+    <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0;">
+      L'éditeur se réserve le droit de refuser ou de supprimer toute soumission sans justification.
+    </p>
+  </section>
+
+  <!-- DONNEES -->
+  <section style="margin-bottom:3rem;">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--f-text-1);margin:0 0 1rem 0;">4. Données personnelles</h2>
+    <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0 0 1rem 0;">
+      Les données soumises via les formulaires (nom, email, liens, bio) sont utilisées exclusivement
+      pour la publication des profils sur la plateforme. Aucune donnée n'est revendue à des tiers.
+    </p>
+    <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0;">
+      Pour toute demande de suppression ou de modification de vos données, contactez :
+      <a href="mailto:contact@from0tohero.dev" style="color:var(--f-sky);text-decoration:none;">contact@from0tohero.dev</a>
+    </p>
+  </section>
+
+  <!-- RESPONSABILITE -->
+  <section style="margin-bottom:3rem;">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--f-text-1);margin:0 0 1rem 0;">5. Limitation de responsabilité</h2>
+    <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0;">
+      from0tohero.dev ne saurait être tenu responsable du contenu soumis par les praticiens,
+      des liens externes référencés, ni des interruptions de service. Le site est fourni "en l'état",
+      sans garantie de disponibilité continue.
+    </p>
+  </section>
+
+  <!-- DROIT -->
+  <section style="margin-bottom:2rem;">
+    <h2 style="font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:var(--f-text-1);margin:0 0 1rem 0;">6. Droit applicable</h2>
+    <p style="font-size:.9rem;color:var(--f-text-2);line-height:1.9;margin:0;">
+      Les présentes conditions sont soumises au droit en vigueur en République de Côte d'Ivoire.
+      Tout litige sera soumis à la juridiction compétente d'Abidjan.
+    </p>
+  </section>
+
+  <hr class="f-hr" style="margin-bottom:2rem;">
+
+  <p style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--f-text-3);line-height:1.8;">
+    Contact : <a href="mailto:contact@from0tohero.dev" style="color:var(--f-sky);text-decoration:none;">contact@from0tohero.dev</a>
   </p>
 
 </div>
-
-<script>
-const articles = [];
-
-const catColors = {
-  data:   { color:'#60a5fa', border:'rgba(96,165,250,.25)',  bg:'rgba(96,165,250,.08)' },
-  devops: { color:'#34d399', border:'rgba(52,211,153,.25)',  bg:'rgba(52,211,153,.08)' },
-  cloud:  { color:'#a78bfa', border:'rgba(167,139,250,.25)', bg:'rgba(167,139,250,.08)' },
-  ia:     { color:'var(--f-orange)', border:'rgba(249,115,22,.25)', bg:'rgba(249,115,22,.08)' },
-  cyber:  { color:'#fb7185', border:'rgba(251,113,133,.25)', bg:'rgba(251,113,133,.08)' },
-  dev:    { color:'#f472b6', border:'rgba(244,114,182,.25)', bg:'rgba(244,114,182,.08)' },
-};
-
-function renderArticles(list) {
-  const grid = document.getElementById('articles-grid');
-  const noRes = document.getElementById('no-results');
-
-  if (!list.length) {
-    grid.innerHTML = '';
-    noRes.style.display = 'block';
-    return;
-  }
-  noRes.style.display = 'none';
-
-  grid.innerHTML = list.map(a => {
-    const c = catColors[a.category] || catColors.data;
-    return `
-    <a href="${a.url}" target="_blank" class="f-card-link">
-      <div class="f-card f-card-hover" style="display:flex;flex-direction:column;gap:.75rem;height:100%;">
-        <span style="font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:${c.color};border:1px solid ${c.border};background:${c.bg};padding:2px 9px;border-radius:4px;width:fit-content;">
-          ${a.category.toUpperCase()}
-        </span>
-        <h3 style="font-family:'Syne',sans-serif;font-size:.98rem;font-weight:700;color:var(--f-text-1);margin:0;flex:1;">${a.title}</h3>
-        <p style="font-family:'Space Mono',monospace;font-size:.68rem;color:var(--f-text-3);margin:0;">${a.author} ${a.country} · ${a.source} · ${a.date}</p>
-        <p style="font-size:.83rem;color:var(--f-text-2);line-height:1.65;margin:0;">${a.excerpt}</p>
-        <span style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--f-sky);">Lire →</span>
-      </div>
-    </a>`;
-  }).join('');
-}
-
-function filterArticles(cat, btn) {
-  document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  renderArticles(cat === 'all' ? articles : articles.filter(a => a.category === cat));
-}
-
-renderArticles(articles);
-</script>
 
 
 
